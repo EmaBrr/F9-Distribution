@@ -1,0 +1,15 @@
+.slides {
+    .item-container {
+        width: 80%;
+
+        .fp-arrow.fp-prev {
+            margin-left: 250px;
+            border-width: 25px 17px 25px 0;
+        }
+        
+        .fp-arrow.fp-next {
+            margin-right: 50px;
+            border-width: 25px 0 25px 17px ;
+        }
+    }
+}
