@@ -67,3 +67,22 @@ function applyZoomEffect() {
   window.addEventListener("load", applyZoomEffect);
   window.addEventListener("resize", applyZoomEffect);
   
+
+// Values 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const valueItems = document.querySelectorAll(".value-item");
+
+  valueItems.forEach(item => {
+    item.addEventListener("click", function () {
+      // Close all other descriptions
+      document.querySelectorAll(".value-description").forEach(desc => {
+        desc.classList.remove("active");
+      });
+
+      // Toggle the current description
+      const desc = this.querySelector(".value-description");
+      desc.classList.toggle("active");
+    });
+  });
+});

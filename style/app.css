@@ -867,17 +867,25 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     background-size: cover; /* End at the original size */
   }
 }
-.about {
+.about-item {
+  padding-top: 120px;
+}
+@media screen and (max-width: 790px) {
+  .about-item {
+    padding-top: 90px;
+  }
+}
+.about-item .about {
   display: flex;
   width: 100%;
   flex-direction: row;
 }
 @media screen and (max-width: 790px) {
-  .about {
+  .about-item .about {
     flex-direction: column;
   }
 }
-.about .about-text {
+.about-item .about .about-text {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -885,43 +893,49 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   align-items: center;
 }
 @media screen and (max-width: 790px) {
-  .about .about-text {
+  .about-item .about .about-text {
     width: 100%;
   }
 }
-.about .about-text p {
+.about-item .about .about-text p {
   color: #f8f7f6;
   font-size: 1.45rem;
   text-align: center;
   padding: 20px;
+  padding-bottom: 50px;
 }
 @media screen and (max-width: 985px) {
-  .about .about-text p {
+  .about-item .about .about-text p {
     font-size: 1.25rem;
     padding: 10px;
+    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 790px) {
-  .about .about-text p {
+  .about-item .about .about-text p {
     font-size: 1.15rem;
+    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 690px) {
-  .about .about-text p {
+  .about-item .about .about-text p {
     font-size: 1.1rem;
     padding: 20px;
+    padding-bottom: 35px;
   }
 }
 @media screen and (max-width: 550px) {
-  .about .about-text p {
+  .about-item .about .about-text p {
     font-size: 1.05rem;
     padding: 10px;
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 440px) {
-  .about .about-text p {
+  .about-item .about .about-text p {
     font-size: 1rem;
     padding: 10px 0px;
+    padding-bottom: 30px;
   }
 }
 
@@ -1052,22 +1066,19 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .values-section .value-item {
   position: relative;
-  width: calc(25% - 20px);
-  height: 400px;
+  width: calc(15% - 20px);
+  height: 350px;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   box-sizing: border-box;
+  flex-grow: 1;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .values-section .value-item {
-    height: 300px;
-  }
-}
-@media (max-width: 600px) {
-  .values-section .value-item {
-    height: 150px;
+    width: calc(100% - 20px);
+    height: 100px;
   }
 }
 .values-section .value-item .value-image {
@@ -1099,6 +1110,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .values-section .value-item .value-overlay .value-description p {
   color: #f8f7f6;
+  line-height: 1.5;
 }
 .values-section .value-item .value-title {
   position: absolute;
@@ -1115,6 +1127,14 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   text-transform: uppercase;
   z-index: 1;
 }
+@media (max-width: 1400px) {
+  .values-section .value-item .value-title {
+    transform: rotate(0);
+    display: flex;
+    align-content: center;
+    justify-items: center;
+  }
+}
 
 .value-item:hover .value-image {
   opacity: 0.3;
@@ -1128,16 +1148,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   opacity: 0;
 }
 
-@media (max-width: 1200px) {
-  .value-item {
-    width: calc(50% - 20px);
-  }
-}
-@media (max-width: 600px) {
-  .value-item {
-    width: calc(100% - 20px);
-  }
-}
 .slides .item-container {
   display: flex;
   align-items: center;
@@ -1151,6 +1161,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .slides .item-container p {
   padding: 0px 20px;
+  height: 100%;
 }
 .slides .item-container .fp-arrow.fp-prev,
 .slides .item-container .fp-arrow.fp-next {
