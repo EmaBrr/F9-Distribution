@@ -183,10 +183,14 @@ $headline-height-xxsmall: 350px;
             border-radius: 8px;
             font-weight: 400;
             letter-spacing: 2px;
+            border: 1px solid $white;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2),
+              0 4px 8px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.2);
 
             &:hover {
-                background-color: #413c36;
-                color: $white;
+              background-color: transparent;
+              color: $white;
+              border: 1px solid $white;
             }
 
             @media screen and (max-width: 1266px) {
