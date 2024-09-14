@@ -86,3 +86,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const logoItems = document.querySelectorAll(".logo-item");
+  const popups = document.querySelectorAll(".popup");
+
+  logoItems.forEach((logoItem) => {
+      logoItem.addEventListener("click", function(e) {
+          e.stopPropagation();
+          hideAllPopups();
+          const popup = logoItem.querySelector(".popup");
+          if (popup) {
+              popup.style.display = "block";
+          }
+      });
+  });
+
+  // Close button inside popup
+  document.querySelectorAll(".close-btn").forEach((btn) => {
+      btn.addEventListener("click", function(e) {
+          e.stopPropagation();
+          hideAllPopups();
+      });
+  });
+
+  // Hide all popups when clicking outside
+  document.addEventListener("click", function() {
+      hideAllPopups();
+  });
+
+  function hideAllPopups() {
+      popups.forEach((popup) => {
+          popup.style.display = "none";
+      });
+  }
+});
