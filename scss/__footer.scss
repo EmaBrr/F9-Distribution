@@ -1,50 +1,189 @@
 .bg-grain::after {
-    content: "";
-    position: fixed;
-    top: -100%;
-    left: -50%;
-    width: 300%;
-    height: 300%;
-    background-image: url("../img/graineffect.png");
-    background-size: 100px 100px;
-    background-repeat: repeat;
-    opacity: 0.3;
-    pointer-events: none;
-    z-index: -1;
-    animation: grain 10s steps(10) infinite;
+  content: "";
+  position: fixed;
+  top: -100%;
+  left: -50%;
+  width: 300%;
+  height: 300%;
+  background-image: url("../img/graineffect.png");
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+  animation: grain 10s steps(10) infinite;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
   }
-  
-  @keyframes grain {
-    0%,
-    100% {
-      transform: translate(0, 0);
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+.footer {
+  background-color: #191919;
+  color: $white;
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-family: $font_5;
+
+    @media (max-width: 920px) {
+      padding: 0px;
     }
-    10% {
-      transform: translate(-5%, -10%);
+
+    .footer-logo {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+
+      @media (max-width: 1420px) {
+        padding-right: 20px;
+      }
+
+      @media (max-width: 920px) {
+        width: 100%;
+        padding-right: 0px;
+      }
+
+      img {
+        max-width: 150px;
+        margin-bottom: 20px;
+
+        @media (max-width: 920px) {
+          margin-bottom: 0px;
+        }
+      }
     }
-    20% {
-      transform: translate(-15%, 5%);
+
+    .footer-contact {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      box-sizing: border-box;
+
+      .contact-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .city-info {
+          flex: 1 1 48%;
+          padding: 10px 0;
+
+          @media (max-width: 1400px) {
+            flex: 1 1 100%;
+          }
+
+          h4 {
+            color: $accentcolor2;
+            font-size: 1.1rem;
+            padding: 10px 0px;
+          }
+
+          p {
+            padding: 5px 0px;
+          }
+        }
+      }
     }
-    30% {
-      transform: translate(7%, -25%);
+
+    .footer-social {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px 0px 20px 5px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+
+      i {
+        font-size: 25px;
+      }
     }
-    40% {
-      transform: translate(-5%, 25%);
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: $accentcolor2;
     }
-    50% {
-      transform: translate(-15%, 10%);
-    }
-    60% {
-      transform: translate(15%, 0);
-    }
-    70% {
-      transform: translate(0, 15%);
-    }
-    80% {
-      transform: translate(3%, 35%);
-    }
-    90% {
-      transform: translate(-10%, 10%);
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.2rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-  
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  font-family: $font_5;
+}
+
+@media (max-width: 920px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact,
+  .footer-social {
+    min-width: unset;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .city-info h4 {
+    font-size: 1.2rem;
+  }
+}
