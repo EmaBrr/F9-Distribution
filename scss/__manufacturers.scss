@@ -11,7 +11,7 @@
   @media screen and (max-width: 440px) {
     padding: 0;
   }
-  
+
   .manufacturer-description {
     flex: 1;
     padding: 20px;
@@ -117,15 +117,15 @@
         transition: transform 0.3s ease;
 
         @media screen and (max-width: 768px) {
-          height: 22px;
+          height: 26px;
         }
 
         @media screen and (max-width: 688px) {
-          height: 25px;
+          height: 24px;
         }
 
         @media screen and (max-width: 440px) {
-          height: 15px;
+          height: 22px;
         }
       }
 

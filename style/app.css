@@ -1361,17 +1361,17 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 @media screen and (max-width: 768px) {
   .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-    height: 22px;
+    height: 26px;
   }
 }
 @media screen and (max-width: 688px) {
   .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-    height: 25px;
+    height: 24px;
   }
 }
 @media screen and (max-width: 440px) {
   .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-    height: 15px;
+    height: 22px;
   }
 }
 .manufacturers-section .manufacturer-logos .logo-item .popup {
