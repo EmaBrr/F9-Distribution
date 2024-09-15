@@ -9,7 +9,6 @@
 
     .fp-slides {
       width: 88%;
-
     }
 
     p {
@@ -20,30 +19,52 @@
     .fp-arrow.fp-prev,
     .fp-arrow.fp-next {
       position: absolute;
-      transform: translateY(50%);
+      transform: translateY(70%);
       cursor: pointer;
+
+      @media screen and (max-width: 800px) {
+        transform: translateY(80%);
+      }
+
+      @media screen and (max-width: 500px) {
+        transform: translateY(100%);
+      }
     }
+
     .fp-arrow.fp-prev {
       left: 20px;
-      border-width: 28px 20px 28px 0;
+      border-width: 25px 20px 25px 0;
+
       @media screen and (max-width: 900px) {
         left: 10px;
+        border-width: 22px 16px 22px 0;
       }
+
       @media screen and (max-width: 800px) {
         left: 0px;
+      }
+
+      @media screen and (max-width: 500px) {
+        border-width: 15px 10px 15px 0px;
       }
     }
 
     .fp-arrow.fp-next {
       right: 20px;
-      border-width: 28px 0 28px 20px;
+      border-width: 25px 0 25px 20px;
+
       @media screen and (max-width: 900px) {
         right: 10px;
+        border-width: 22px 0px 22px 16px;
       }
+
       @media screen and (max-width: 800px) {
         right: 0px;
+      }
+
+      @media screen and (max-width: 500px) {
+        border-width: 15px 0px 15px 10px;
       }
     }
   }
 }
-
