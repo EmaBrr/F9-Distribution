@@ -308,26 +308,31 @@ main {
 @media screen and (max-width: 985px) {
   .item .item-container p {
     font-size: 1.15rem;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 790px) {
   .item .item-container p {
     font-size: 1.05rem;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 690px) {
   .item .item-container p {
     font-size: 1.1rem;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 550px) {
   .item .item-container p {
     font-size: 1.05rem;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 440px) {
   .item .item-container p {
     font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
 
@@ -1044,7 +1049,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   margin: 0;
   display: flex;
   justify-content: center;
-  line-height: 1.5;
   min-height: 80px;
   padding: 10px 0px;
 }
@@ -1204,22 +1208,95 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding: 20px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 985px) {
+  .manufacturers-section {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .manufacturers-section {
+    padding: 0;
+  }
+}
 .manufacturers-section .manufacturer-description {
   flex: 1;
   padding: 20px;
   max-width: 50%;
   box-sizing: border-box;
 }
+@media screen and (max-width: 985px) {
+  .manufacturers-section .manufacturer-description {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .manufacturers-section .manufacturer-description {
+    flex-direction: column;
+    max-width: 60%;
+    flex: none;
+  }
+}
+@media screen and (max-width: 690px) {
+  .manufacturers-section .manufacturer-description {
+    padding: 10px;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 555px) {
+  .manufacturers-section .manufacturer-description {
+    padding: 10px;
+    max-width: 100%;
+    flex: none;
+  }
+}
+@media screen and (max-width: 440px) {
+  .manufacturers-section .manufacturer-description {
+    padding: 0px;
+  }
+}
 .manufacturers-section .manufacturer-description h3 {
   text-align: left;
   line-height: 2rem;
 }
+@media screen and (max-width: 985px) {
+  .manufacturers-section .manufacturer-description h3 {
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 790px) {
+  .manufacturers-section .manufacturer-description h3 {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 555px) {
+  .manufacturers-section .manufacturer-description h3 {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .manufacturers-section .manufacturer-description h3 {
+    font-size: 0.95rem;
+  }
+}
 .manufacturers-section .manufacturer-description p {
   text-align: left;
 }
-@media (max-width: 768px) {
-  .manufacturers-section .manufacturer-description {
-    max-width: 100%;
+@media screen and (max-width: 790px) {
+  .manufacturers-section .manufacturer-description p {
+    font-size: 1.15rem;
+  }
+}
+@media screen and (max-width: 555px) {
+  .manufacturers-section .manufacturer-description p {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .manufacturers-section .manufacturer-description p {
+    font-size: 0.9rem;
+    padding: 15px 0px;
   }
 }
 .manufacturers-section .manufacturer-logos {
@@ -1231,6 +1308,22 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   max-width: 50%;
   box-sizing: border-box;
 }
+@media screen and (max-width: 768px) {
+  .manufacturers-section .manufacturer-logos {
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 690px) {
+  .manufacturers-section .manufacturer-logos {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 555px) {
+  .manufacturers-section .manufacturer-logos {
+    max-width: 100%;
+    flex: none;
+  }
+}
 .manufacturers-section .manufacturer-logos .logo-item {
   padding: 10px;
   flex: 1 1 33%;
@@ -1238,27 +1331,32 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .manufacturers-section .manufacturer-logos .logo-item .company-logo {
   height: 30px;
+  width: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-@media (max-width: 768px) {
-  .manufacturers-section .manufacturer-logos .logo-item {
-    flex: 1 1 100%;
+@media screen and (max-width: 768px) {
+  .manufacturers-section .manufacturer-logos .logo-item .company-logo {
+    height: 22px;
   }
 }
-
-.logo-item:hover .company-logo {
-  transform: scale(1.1);
+@media screen and (max-width: 688px) {
+  .manufacturers-section .manufacturer-logos .logo-item .company-logo {
+    height: 25px;
+  }
 }
-
-.popup {
+@media screen and (max-width: 440px) {
+  .manufacturers-section .manufacturer-logos .logo-item .company-logo {
+    height: 15px;
+  }
+}
+.manufacturers-section .manufacturer-logos .logo-item .popup {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
-  max-width: 50%;
+  width: 50%;
   padding: 15px;
   background-color: black;
   color: white;
@@ -1266,28 +1364,54 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   z-index: 10;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-.popup p {
-  color: #f8f7f6 !important;
-  padding: 30px;
+@media screen and (max-width: 985px) {
+  .manufacturers-section .manufacturer-logos .logo-item .popup {
+    width: 80%;
+  }
 }
-
-.popup .close-btn {
+@media screen and (max-width: 555px) {
+  .manufacturers-section .manufacturer-logos .logo-item .popup {
+    width: 90%;
+  }
+}
+.manufacturers-section .manufacturer-logos .logo-item .popup .close-btn {
   position: absolute;
   top: 5px;
   right: 5px;
   cursor: pointer;
   color: #f8f7f6 !important;
 }
-
-@media (max-width: 768px) {
-  .manufacturers-section {
-    flex-direction: column;
-  }
-  .manufacturer-description,
-  .manufacturer-logos {
-    width: 100%;
+.manufacturers-section .manufacturer-logos .logo-item .popup p {
+  color: #f8f7f6 !important;
+  padding: 25px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1266px) {
+  .manufacturers-section .manufacturer-logos .logo-item .popup p {
+    font-size: 1rem;
   }
 }
+@media screen and (max-width: 985px) {
+  .manufacturers-section .manufacturer-logos .logo-item .popup p {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 555px) {
+  .manufacturers-section .manufacturer-logos .logo-item .popup p {
+    padding: 10px 5px;
+    font-size: 0.9rem;
+  }
+}
+.manufacturers-section .manufacturer-logos .logo-item .popup h3 {
+  padding: 0;
+  padding-top: 10px;
+  font-size: 1.2rem;
+}
+
+.logo-item:hover .company-logo {
+  transform: scale(1.1);
+}
+
 .bg-grain::after {
   content: "";
   position: fixed;
