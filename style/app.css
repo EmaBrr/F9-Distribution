@@ -1080,7 +1080,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 @media (max-width: 1400px) {
   .values-section .value-item {
     width: calc(100% - 20px);
-    height: 100px;
+    height: 150px;
   }
 }
 .values-section .value-item .value-image {
@@ -1259,7 +1259,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
   .slide-img {
     width: 100%;
-    max-width: 300px; /* Limit image size on smaller screens */
+    max-width: 300px;
   }
   .slide-content p {
     text-align: center;
