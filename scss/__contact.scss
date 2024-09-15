@@ -47,6 +47,10 @@
         margin: 0;
         margin-left: 10px;
         color: $accentcolor2;
+
+        @media screen and (max-width: 730px) {
+          margin-left: 5px;
+        }
       }
     }
 
@@ -168,11 +172,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 768px) {
-//   .contact-info,
-//   .contact-form {
-//     max-width: 100%;
-//     padding: 10px;
-//   }
-// }

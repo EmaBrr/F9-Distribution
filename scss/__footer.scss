@@ -69,6 +69,7 @@
 
     @media (max-width: 920px) {
       padding: 0px;
+      width: 90%;
     }
 
     .footer-logo {
@@ -87,6 +88,7 @@
       @media (max-width: 920px) {
         width: 100%;
         padding-right: 0px;
+        padding: 0;
       }
 
       img {
@@ -104,6 +106,11 @@
       min-width: 300px;
       padding: 20px;
       box-sizing: border-box;
+
+      @media (max-width: 920px) {
+        width: 90%;
+        padding: 0;
+      }
 
       .contact-details {
         display: flex;
@@ -129,6 +136,7 @@
             padding: 5px 0px;
             letter-spacing: 1px;
             font-weight: 300;
+            line-height: 1.4;
           }
         }
       }

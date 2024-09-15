@@ -1166,6 +1166,32 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   height: 100%;
   color: #f8f7f6;
 }
+.slides .item-container .slide-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  align-items: center;
+}
+.slides .item-container .slide-content .slide-img {
+  width: 35%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .slides .item-container .slide-content .slide-img {
+    width: 80%;
+  }
+}
+.slides .item-container .slide-content p {
+  flex: 1;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .slides .item-container .slide-content p {
+    text-align: center;
+  }
+}
 .slides .item-container .fp-arrow.fp-prev,
 .slides .item-container .fp-arrow.fp-next {
   position: absolute;
@@ -1226,6 +1252,19 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .slide-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .slide-img {
+    width: 100%;
+    max-width: 300px; /* Limit image size on smaller screens */
+  }
+  .slide-content p {
+    text-align: center;
+  }
+}
 .manufacturers-section {
   display: flex;
   flex-wrap: wrap;
@@ -1491,6 +1530,11 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   margin-left: 10px;
   color: #b09c86;
 }
+@media screen and (max-width: 730px) {
+  .contact-us-section .contact-info .contact-option h3 {
+    margin-left: 5px;
+  }
+}
 .contact-us-section .contact-info p {
   height: auto;
   text-align: left;
@@ -1678,6 +1722,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 @media (max-width: 920px) {
   .footer .footer-content {
     padding: 0px;
+    width: 90%;
   }
 }
 .footer .footer-content .footer-logo {
@@ -1698,6 +1743,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   .footer .footer-content .footer-logo {
     width: 100%;
     padding-right: 0px;
+    padding: 0;
   }
 }
 .footer .footer-content .footer-logo img {
@@ -1714,6 +1760,12 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   min-width: 300px;
   padding: 20px;
   box-sizing: border-box;
+}
+@media (max-width: 920px) {
+  .footer .footer-content .footer-contact {
+    width: 90%;
+    padding: 0;
+  }
 }
 .footer .footer-content .footer-contact .contact-details {
   display: flex;
@@ -1739,6 +1791,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding: 5px 0px;
   letter-spacing: 1px;
   font-weight: 300;
+  line-height: 1.4;
 }
 .footer .footer-content .footer-social {
   flex: 1;
