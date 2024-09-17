@@ -1393,29 +1393,34 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   text-align: center;
 }
 .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-  height: auto;
-  width: 150px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  max-width: 150px;
+  max-height: 90px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1000px) {
   .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-    width: 90px;
+    max-width: 130px;
+    max-height: 80px;
   }
 }
 @media screen and (max-width: 768px) {
   .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-    width: 100px;
+    max-width: 100px;
+    max-height: 50px;
   }
 }
 @media screen and (max-width: 688px) {
   .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-    width: 100px;
+    max-width: 100px;
+    max-height: 50px;
   }
 }
 @media screen and (max-width: 440px) {
   .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-    width: 100px;
+    max-width: 90px;
+    max-height: 45px;
   }
 }
 .manufacturers-section .manufacturer-logos .logo-item .popup {
@@ -1448,6 +1453,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   right: 5px;
   cursor: pointer;
   color: #f8f7f6 !important;
+  border-bottom: none;
 }
 .manufacturers-section .manufacturer-logos .logo-item .popup p {
   color: #f8f7f6 !important;
@@ -1474,6 +1480,18 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding: 0;
   padding-top: 10px;
   font-size: 1.2rem;
+}
+.manufacturers-section .manufacturer-logos .logo-item .popup a {
+  font-family: "Work Sans", sans-serif;
+}
+.manufacturers-section .manufacturer-logos .logo-item .popup a button {
+  background-color: transparent;
+  color: #f8f7f6;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.manufacturers-section .manufacturer-logos .logo-item .popup a button i {
+  font-size: 12px;
 }
 
 .logo-item:hover .company-logo {

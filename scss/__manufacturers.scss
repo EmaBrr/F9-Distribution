@@ -7,7 +7,7 @@
   @media screen and (max-width: 985px) {
     padding: 10px;
   }
-  
+
   @media screen and (max-width: 440px) {
     padding: 0;
   }
@@ -111,25 +111,30 @@
       text-align: center;
 
       .company-logo {
-        height: auto;
-        width: 150px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+        max-width: 150px; 
+        max-height: 90px; 
+        object-fit: contain; 
+        display: block;
+        margin: 0 auto;
 
         @media screen and (max-width: 1000px) {
-            width: 90px;
-          }
+            max-width: 130px;
+            max-height: 80px;
+        }
 
         @media screen and (max-width: 768px) {
-            width: 100px;
+            max-width: 100px;
+            max-height: 50px;
         }
 
         @media screen and (max-width: 688px) {
-            width: 100px;
+            max-width: 100px;
+            max-height: 50px;
         }
 
         @media screen and (max-width: 440px) {
-            width: 100px;
+            max-width: 90px;
+            max-height: 45px;
         }
       }
 
@@ -154,13 +159,14 @@
         @media screen and (max-width: 555px) {
           width: 90%;
         }
-        
+
         .close-btn {
           position: absolute;
           top: 5px;
           right: 5px;
           cursor: pointer;
           color: $white !important;
+          border-bottom: none;
         }
 
         p {
@@ -186,6 +192,21 @@
           padding: 0;
           padding-top: 10px;
           font-size: 1.2rem;
+        }
+
+        a {
+          font-family: $font_6;
+
+          button {
+            background-color: transparent;
+            color: $white;
+            font-style: italic;
+            letter-spacing: 1px;
+
+            i {
+              font-size: 12px;
+            }
+          }
         }
       }
     }
