@@ -137,7 +137,7 @@ main {
   background-color: #191919;
 }
 
-#section2, #section3, #section4, #section5, #section6 {
+#section2, #section2-1, #section3, #section4, #section5, #section6 {
   background-color: #2b2b2b;
 }
 
@@ -402,7 +402,7 @@ header .nav .nav-container .logo a .logo-container {
   transition: transform 0.5s ease;
 }
 header .nav .nav-container .logo a .logo-container:hover {
-  transform: scale(0.8);
+  transform: scale(1.1);
 }
 header .nav .nav-container .logo a .logo-container img {
   max-height: 47px;
@@ -446,7 +446,7 @@ header .nav .nav-container .navigation .nav-items li a {
   transition: transform 0.5s ease;
 }
 header .nav .nav-container .navigation .nav-items li a:hover {
-  transform: scale(0.8);
+  transform: scale(1.1);
 }
 header .nav .nav-container .navigation .nav-items li a :visited {
   color: #f8f7f6;
@@ -853,19 +853,19 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 @media screen and (max-width: 985px) {
   .fp-overflow .welcome .welcome-container .headline .text-box .button {
-    padding: 13px 30px;
+    padding: 14px 30px;
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 790px) {
   .fp-overflow .welcome .welcome-container .headline .text-box .button {
-    padding: 13px 25px;
+    padding: 12px 25px;
     font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 550px) {
   .fp-overflow .welcome .welcome-container .headline .text-box .button {
-    padding: 12px 20px;
+    padding: 12px 22px;
     font-size: 0.8rem;
   }
 }
@@ -878,17 +878,20 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     background-size: cover; /* End at the original size */
   }
 }
-.about {
+.us {
+  padding-top: 0px !important;
+}
+.us .about {
   display: flex;
   width: 100%;
   flex-direction: row;
 }
 @media screen and (max-width: 790px) {
-  .about {
+  .us .about {
     flex-direction: column;
   }
 }
-.about .about-text {
+.us .about .about-text {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -896,49 +899,43 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   align-items: center;
 }
 @media screen and (max-width: 790px) {
-  .about .about-text {
+  .us .about .about-text {
     width: 100%;
   }
 }
-.about .about-text p {
+.us .about .about-text p {
   color: #f8f7f6;
   font-size: 1.45rem;
   text-align: center;
   padding: 20px;
-  padding-bottom: 50px;
 }
 @media screen and (max-width: 985px) {
-  .about .about-text p {
+  .us .about .about-text p {
     font-size: 1.25rem;
     padding: 10px;
-    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 790px) {
-  .about .about-text p {
+  .us .about .about-text p {
     font-size: 1.15rem;
-    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 690px) {
-  .about .about-text p {
+  .us .about .about-text p {
     font-size: 1.1rem;
     padding: 20px;
-    padding-bottom: 35px;
   }
 }
 @media screen and (max-width: 550px) {
-  .about .about-text p {
+  .us .about .about-text p {
     font-size: 1.05rem;
     padding: 10px;
-    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 440px) {
-  .about .about-text p {
+  .us .about .about-text p {
     font-size: 1rem;
     padding: 10px 0px;
-    padding-bottom: 30px;
   }
 }
 
@@ -978,6 +975,9 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+}
+.services .service-item:hover {
+  transform: scale(1.05);
 }
 @media screen and (max-width: 985px) {
   .services .service-item {
@@ -1166,29 +1166,58 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   height: 100%;
   color: #f8f7f6;
 }
-.slides .item-container .slide-content {
+.slides .item-container .slide {
+  min-height: 420px;
+}
+@media screen and (max-width: 1280px) {
+  .slides .item-container .slide {
+    min-height: 350px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .slides .item-container .slide {
+    min-height: 450px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .slides .item-container .slide {
+    min-height: 450px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slides .item-container .slide {
+    min-height: 450px;
+  }
+}
+.slides .item-container .slide h3 {
+  color: #f8f7f6;
+  font-family: "Poppins", Sans-serif;
+  letter-spacing: 2px;
+  width: 100%;
+}
+.slides .item-container .slide .slide-content {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   align-items: center;
 }
-.slides .item-container .slide-content .slide-img {
+.slides .item-container .slide .slide-content .slide-img {
   width: 35%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
 @media screen and (max-width: 768px) {
-  .slides .item-container .slide-content .slide-img {
+  .slides .item-container .slide .slide-content .slide-img {
     width: 80%;
   }
 }
-.slides .item-container .slide-content p {
+.slides .item-container .slide .slide-content p {
   flex: 1;
   text-align: left;
 }
 @media screen and (max-width: 768px) {
-  .slides .item-container .slide-content p {
+  .slides .item-container .slide .slide-content p {
     text-align: center;
   }
 }
@@ -1393,7 +1422,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   text-align: center;
 }
 .manufacturers-section .manufacturer-logos .logo-item .company-logo {
-  max-width: 150px;
+  max-width: 170px;
   max-height: 90px;
   object-fit: contain;
   display: block;
@@ -1747,10 +1776,8 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding-right: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 20px;
-  text-align: center;
 }
 @media (max-width: 1420px) {
   .footer .footer-content .footer-logo {
@@ -1760,8 +1787,13 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 @media (max-width: 920px) {
   .footer .footer-content .footer-logo {
     width: 100%;
-    padding-right: 0px;
-    padding: 0;
+    padding: 20px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 350px) {
+  .footer .footer-content .footer-logo {
+    padding: 0px;
   }
 }
 .footer .footer-content .footer-logo img {
@@ -1804,12 +1836,14 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   font-size: 1.2rem;
   padding: 10px 0px;
   font-weight: 300;
+  text-align: left;
 }
 .footer .footer-content .footer-contact .contact-details .city-info p {
   padding: 5px 0px;
   letter-spacing: 1px;
   font-weight: 300;
   line-height: 1.4;
+  text-align: left;
 }
 .footer .footer-content .footer-social {
   flex: 1;
@@ -1826,11 +1860,13 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   font-size: 1.3rem;
   margin-bottom: 10px;
   color: #b09c86;
+  text-align: left;
 }
 .footer .footer-content a {
   color: #f8f7f6;
   text-decoration: none;
   font-size: 1.2rem;
+  text-align: left;
 }
 .footer .footer-content a:hover {
   text-decoration: underline;

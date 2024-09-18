@@ -111,8 +111,11 @@
       text-align: center;
 
       .company-logo {
-        max-width: 150px; 
+        max-width: 170px; 
         max-height: 90px; 
+        // min-height: 170px;
+        // min-width: 200px;
+        // min-width: 150px;
         object-fit: contain; 
         display: block;
         margin: 0 auto;

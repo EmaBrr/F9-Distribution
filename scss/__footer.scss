@@ -76,10 +76,10 @@
       padding-right: 100px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      // align-items: center;
       justify-content: center;
       padding: 20px;
-      text-align: center;
+      // text-align: center;
 
       @media (max-width: 1420px) {
         padding-right: 20px;
@@ -87,8 +87,12 @@
 
       @media (max-width: 920px) {
         width: 100%;
-        padding-right: 0px;
-        padding: 0;
+        padding: 20px;
+        text-align: left;
+      }
+
+      @media screen and (max-width: 350px) {
+        padding: 0px;
       }
 
       img {
@@ -130,6 +134,7 @@
             font-size: 1.2rem;
             padding: 10px 0px;
             font-weight: 300;
+            text-align: left;
           }
 
           p {
@@ -137,6 +142,7 @@
             letter-spacing: 1px;
             font-weight: 300;
             line-height: 1.4;
+            text-align: left;
           }
         }
       }
@@ -159,12 +165,14 @@
       font-size: 1.3rem;
       margin-bottom: 10px;
       color: $accentcolor2;
+      text-align: left;
     }
 
     a {
       color: $white;
       text-decoration: none;
       font-size: 1.2rem;
+      text-align: left;
 
       &:hover {
         text-decoration: underline;

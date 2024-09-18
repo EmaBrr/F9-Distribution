@@ -30,6 +30,10 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @media screen and (max-width: 985px) {
       padding: 10px;
