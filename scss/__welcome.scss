@@ -1,34 +1,11 @@
-$headline-padding-large: 40px 90px;
-$headline-padding-medium: 30px 60px;
-$headline-padding-small: 20px 40px;
-$headline-padding-xsmall: 15px 20px;
-
-$headline-height-large: 700px;
-$headline-height-medium: 600px;
-$headline-height-small: 500px;
-$headline-height-xsmall: 400px;
-$headline-height-xxsmall: 350px;
-
 .fp-overflow {
   width: 100%;
+
   .welcome {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 45px;
-
-    @media screen and (max-width: 920px) {
-      margin-top: 55px;
-    }
-
-    @media screen and (min-width: 921px) and (max-width: 1499px) {
-      margin-top: 50px;
-    }
-
-    @media screen and (max-width: 1500px) {
-      margin-top: 45px;
-    }
 
     .welcome-container {
       display: flex;
@@ -36,17 +13,42 @@ $headline-height-xxsmall: 350px;
       width: 100%;
       max-width: 1400px;
 
+      @media screen and (min-width: 1500px) and (max-height: 820px) {
+        margin-top: 110px;
+      }
+
+      @media screen and (min-width: 1500px) and (min-height: 820px) {
+        margin-top: 30px;
+      }
+
       @media screen and (max-width: 1500px) {
         width: 90%;
+      }
+
+      @media screen and (min-width: 1001px) and (max-width: 1499px) and (max-height: 550px) {
+        margin-top: 90px;
+      }
+
+
+      @media screen and (min-width: 1001px) and (max-width: 1499px) and (min-height: 550px) {
+        margin-top: 40px;
+      }
+
+      @media screen and (max-width: 1000px) and (max-height: 820px) {
+        margin-top: 90px;
+      }
+
+      @media screen and (max-width: 1000px) and (min-height: 820px) {
+        margin-top: 30px;
       }
 
       .headline {
         background-image: url("../img/Parrot-army-drone.jpeg");
         position: relative;
         background-position: center center;
-        background-size: 150%; /* Start zoomed in */
+        background-size: 150%;
         border-radius: 15px;
-        padding: $headline-padding-large;
+        padding: 40px 90px;
         height: 78vh;
         overflow: hidden;
         width: 100%;
@@ -70,31 +72,31 @@ $headline-height-xxsmall: 350px;
         }
 
         @media screen and (max-width: 1266px) {
-          padding: $headline-padding-medium;
+          padding: 30px 60px;
           height: 82vh;
           max-height: 800px;
         }
 
         @media screen and (max-width: 1092px) {
-          padding: $headline-padding-small;
+          padding: 20px 40px;
           height: 82vh;
           max-height: 700px;
         }
 
         @media screen and (max-width: 985px) {
-          padding: $headline-padding-small;
+          padding: 20px 40px;
           height: 82vh;
           max-height: 670px;
         }
 
         @media screen and (max-width: 790px) {
-          padding: $headline-padding-small;
+          padding:  20px 40px;
           height: 82vh;
           max-height: 650px;
         }
 
         @media screen and (max-width: 550px) {
-          padding: $headline-padding-xsmall;
+          padding: 15px 20px;
           height: 82vh;
           max-height: 630px;
         }
@@ -119,7 +121,7 @@ $headline-height-xxsmall: 350px;
           }
 
           h1 {
-            font-family: $font_5;
+            font-family: $font_1;
             font-size: 3.2rem;
             font-weight: 700;
             letter-spacing: 2px;
@@ -150,7 +152,7 @@ $headline-height-xxsmall: 350px;
           }
 
           h2 {
-            font-family: $font_6;
+            font-family: $font_2;
             font-size: 1.5rem;
             font-weight: 300;
             letter-spacing: 2px;
@@ -173,9 +175,9 @@ $headline-height-xxsmall: 350px;
           }
 
           .button {
-            background-color: $accentcolor2;
+            background-color: $accentcolor;
             color: $white;
-            font-family: $font_6;
+            font-family: $font_2;
             font-size: 1.1rem;
             text-transform: uppercase;
             padding: 14px 40px;
@@ -221,9 +223,9 @@ $headline-height-xxsmall: 350px;
 
 @keyframes zoomOut {
   0% {
-    background-size: 120%; /* Start zoomed in */
+    background-size: 120%; 
   }
   100% {
-    background-size: cover; /* End at the original size */
+    background-size: cover; 
   }
 }

@@ -20,14 +20,14 @@
     max-width: 1400px;
 
     span {
-      font-family: $font_6;
+      font-family: $font_2;
       font-size: 1.4rem;
       font-weight: 400;
       letter-spacing: 2px;
       text-transform: uppercase;
       text-align: center;
-      color: $accentcolor2;
-      border-bottom: 1px solid $accentcolor2;
+      color: $accentcolor;
+      border-bottom: 1px solid $accentcolor;
       width: fit-content;
 
       @media screen and (max-width: 1266px) {
@@ -52,7 +52,7 @@
     }
 
     h1 {
-      font-family: $font_5;
+      font-family: $font_1;
       width: 100%;
       font-size: 2.5rem;
       letter-spacing: 4px;
@@ -90,7 +90,7 @@
     }
 
     h3 {
-      font-family: $font_6;
+      font-family: $font_2;
       font-size: 1.6rem;
       font-weight: 400;
       letter-spacing: 1px;
@@ -127,12 +127,12 @@
     }
 
     p {
-      font-family: $font_6;
+      font-family: $font_2;
       font-size: 1.3rem;
       font-weight: 300;
       letter-spacing: 1px;
       line-height: 2;
-      color: $accentcolor2;
+      color: $accentcolor;
       text-align: center;
 
       @media screen and (max-width: 1266px) {

@@ -38,7 +38,7 @@
 
       i {
         font-size: 18px;
-        color: $accentcolor2;
+        color: $accentcolor;
       }
 
       h3 {
@@ -46,7 +46,7 @@
         padding: 10px 0px;
         margin: 0;
         margin-left: 10px;
-        color: $accentcolor2;
+        color: $accentcolor;
 
         @media screen and (max-width: 730px) {
           margin-left: 5px;
@@ -84,7 +84,7 @@
       label {
         display: block;
         margin-bottom: 10px;
-        font-family: $font_5;
+        font-family: $font_1;
         font-size: 1rem;
         text-transform: uppercase;
 
@@ -98,7 +98,7 @@
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-family: $font_5;
+        font-family: $font_1;
         height: 30px;
 
         @media screen and (max-width: 730px) {
@@ -111,7 +111,7 @@
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-family: $font_5;
+        font-family: $font_1;
         height: 100px;
 
         @media screen and (max-width: 730px) {
@@ -130,9 +130,9 @@
     }
   }
   button[type="submit"] {
-    background-color: $accentcolor2;
+    background-color: $accentcolor;
     color: $white;
-    font-family: $font_6;
+    font-family: $font_2;
     font-size: 1.1rem;
     text-transform: uppercase;
     padding: 10px 40px;

@@ -38,7 +38,7 @@
 
       h3 {
         color: $white;
-        font-family: $font_5;
+        font-family: $font_1;
         letter-spacing: 2px;
         width: 100%;
       }
@@ -89,7 +89,7 @@
     .fp-arrow.fp-prev {
       left: 20px;
       border-width: 25px 20px 25px 0;
-      color: $accentcolor2;
+      color: $accentcolor;
 
       @media screen and (max-width: 900px) {
         left: 10px;
