@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 // Welcome zoom 
 
 function applyZoomEffect() {
@@ -67,25 +65,7 @@ function applyZoomEffect() {
   window.addEventListener("load", applyZoomEffect);
   window.addEventListener("resize", applyZoomEffect);
   
-
-// Values 
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const valueItems = document.querySelectorAll(".value-item");
-
-//   valueItems.forEach(item => {
-//     item.addEventListener("click", function () {
-//       // Close all other descriptions
-//       document.querySelectorAll(".value-description").forEach(desc => {
-//         desc.classList.remove("active");
-//       });
-
-//       // Toggle the current description
-//       const desc = this.querySelector(".value-description");
-//       desc.classList.toggle("active");
-//     });
-//   });
-// });
+// Brands:
 
 document.addEventListener("DOMContentLoaded", function() {
   const logoItems = document.querySelectorAll(".logo-item");
@@ -102,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  // Close button inside popup
   document.querySelectorAll(".close-btn").forEach((btn) => {
       btn.addEventListener("click", function(e) {
           e.stopPropagation();
@@ -110,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  // Hide all popups when clicking outside
   document.addEventListener("click", function() {
       hideAllPopups();
   });
@@ -123,3 +101,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// Slide content and navigation
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector('.nav');
+  const slides = document.querySelectorAll('.section, .slide');
+
+  function adjustPadding() {
+    const navHeight = nav.offsetHeight;
+    slides.forEach(slide => {
+      slide.style.paddingTop = `calc(${navHeight} + 25)px`;
+    });
+  }
+
+  adjustPadding();
+  window.addEventListener('resize', adjustPadding);
+});

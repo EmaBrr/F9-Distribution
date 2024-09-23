@@ -3,12 +3,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
-  padding-top: 120px;
-
-  @media screen and (max-width: 790px) {
-    padding-top: 60px;
-  }
 
   .item-container {
     display: flex;
@@ -17,7 +11,6 @@
     width: 90%;
     max-width: 1400px;
     align-items: center;
-    max-width: 1400px;
 
     span {
       font-family: $font_2;
