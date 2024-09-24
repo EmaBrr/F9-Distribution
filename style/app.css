@@ -179,7 +179,6 @@ main {
   }
 }
 
-#section1 .fp-overflow,
 #section2 .fp-overflow,
 #section2-1 .fp-overflow,
 #section4 .fp-overflow,
@@ -189,12 +188,23 @@ main {
   justify-content: center;
 }
 @media screen and (max-width: 1000px) {
-  #section1 .fp-overflow,
   #section2 .fp-overflow,
   #section2-1 .fp-overflow,
   #section4 .fp-overflow,
   #section5 .fp-overflow {
     height: calc(100vh - 85px);
+    box-sizing: border-box;
+  }
+}
+
+#section1 .fp-overflow {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  #section1 .fp-overflow {
+    height: 100vh;
     box-sizing: border-box;
   }
 }
@@ -769,21 +779,21 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 @media screen and (max-width: 985px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 20px 40px;
-    height: 82vh;
+    height: 80vh;
     max-height: 670px;
   }
 }
 @media screen and (max-width: 790px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 20px 40px;
-    height: 82vh;
+    height: 75vh;
     max-height: 650px;
   }
 }
 @media screen and (max-width: 550px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 15px 20px;
-    height: 82vh;
+    height: 70vh;
     max-height: 630px;
   }
 }

@@ -101,7 +101,7 @@ main {
 //   justify-content: center;
 // }
 
-#section1,
+
 #section2,
 #section2-1,
 #section4,
@@ -114,6 +114,20 @@ main {
     @media screen and (max-width: 1000px) {
       // padding-top: 85px;
       height: calc(100vh - 85px);
+      box-sizing: border-box;
+    }
+  }
+}
+
+#section1 {
+  .fp-overflow {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 1000px) {
+      // padding-top: 85px;
+      height: 100vh;
       box-sizing: border-box;
     }
   }
