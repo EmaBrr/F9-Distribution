@@ -162,7 +162,6 @@ main {
 }
 
 .section {
-  height: 100vh;
   padding-top: 60px;
   box-sizing: border-box;
 }
@@ -191,6 +190,16 @@ main {
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  #section1 .fp-overflow,
+  #section2 .fp-overflow,
+  #section2-1 .fp-overflow,
+  #section4 .fp-overflow,
+  #section5 .fp-overflow {
+    height: calc(100vh - 85px);
+    box-sizing: border-box;
+  }
 }
 
 .item {
