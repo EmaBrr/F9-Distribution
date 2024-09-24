@@ -50,7 +50,6 @@ main {
   // .fp-overflow {
   //   height: 100vh;
   // }
-  
 }
 #section2,
 #section2-1,
@@ -117,5 +116,35 @@ main {
       height: calc(100vh - 85px);
       box-sizing: border-box;
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #section1 {
+    min-height: 500px;
+  }
+
+  #section2 {
+    min-height: 500px;
+  }
+
+  #section2-1 {
+    min-height: 680px;
+  }
+
+  #section3 {
+    min-height: 700px;
+  }
+
+  #section4 {
+    min-height: 640px;
+  }
+
+  #section5 {
+    min-height: 500px;
+  }
+
+  #section6 {
+    min-height: 570px;
   }
 }
