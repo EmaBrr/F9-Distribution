@@ -91,6 +91,25 @@ main {
 
   @media screen and (max-width: 1000px) {
     padding-top: 85px;
+    // height: calc(100vh - 85px);
+    box-sizing: border-box;
   }
 }
 
+// .fp-overflow {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+// }
+
+#section1,
+#section2,
+#section2-1,
+#section4,
+#section5 {
+  .fp-overflow {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+}
