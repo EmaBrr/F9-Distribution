@@ -40,17 +40,18 @@
                 </div>
                 <nav class="navigation">
                     <div class="nav-mobile">
-                        <a id="nav-ham" class="nav-ham" href="#!">
+                        <a id="nav-ham" class="nav-ham" href="#section1">
                             <span></span>
                         </a>
                     </div>
                     <ul class="nav-items">
-                        <li><a href="#section1">Home</a></li>
+                        <!-- <li><a href="#section1">Home</a></li> -->
                         <li><a href="#section2">About Us</a></li>
-                        <li><a href="#section3">News</a></li>
-                        <li><a href="#section4">Services</a></li>
-                        <li><a href="#section5">Our Manufacturers</a></li>
-                        <li><a href="#section6">Contact Us</a></li>
+                        <li><a href="#section3">Our Values</a></li>
+                        <li><a href="#section4">News</a></li>
+                        <li><a href="#section5">Services</a></li>
+                        <li><a href="#section6">Our Manufacturers</a></li>
+                        <li><a href="#section7">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -58,15 +59,16 @@
     </header>
 
     <div id="fullpage">
+
         <!-- Welcome -->
-        <div class="section" id="section1">
+        <div class="section" id="section-welcome">
             <div class="welcome">
                 <div class="welcome-container">
                     <div class="headline">
                         <div class="text-box">
                             <h1>Welcome to F9 Defence Distribution page</h1>
                             <h2>Your Partner in Advanced Defense Solutions</h2>
-                            <button class="button" onclick="window.location.href='#section6'">Contact Us</button>
+                            <button class="button" onclick="fullpage_api.moveTo('section6')">Contact Us</button>
                         </div>
                     </div>
                 </div>
@@ -74,7 +76,7 @@
         </div>
 
         <!-- About  -->
-        <div class="section" id="section2">
+        <div class="section" id="section-about">
             <div class="item">
                 <div class="item-container us">
                     <span>WHO WE ARE</span>
@@ -96,7 +98,9 @@
                 </div>
             </div>
         </div>
-        <div class="section" id="section2-1">
+
+        <!-- Our Values  -->
+        <div class="section" id="section-values">
             <div class="item">
                 <div class="item-container">
                     <span>WHAT WE STAND FOR</span>
@@ -180,23 +184,12 @@
         </div>
 
         <!-- News  -->
-        <div class="section" id="section3">
+        <div class="section" id="section-news">
             <div class="item slides">
                 <div class="item-container">
                     <span>What is New</span>
                     <h1>Latest Updates</h1>
-                    <div class="slide">
-                        <h3>Trip to Estonia</h3>
-                        <div class="slide-content">
-                            <img src="./img/Parrot-army-drone.jpeg" alt="Update" class="slide-img" />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, rerum magnam
-                                libero provident nesciunt maxime ullam. Minima a cupiditate hic. Lorem
-                                ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente
-                                laboriosam, voluptas optio a voluptatibus.
-                            </p>
-                        </div>
-                    </div>
+
                     <div class="slide">
                         <h3>Trip to Latvia</h3>
                         <div class="slide-content">
@@ -212,6 +205,20 @@
                             </p>
                         </div>
                     </div>
+
+                    <div class="slide">
+                        <h3>Trip to Estonia</h3>
+                        <div class="slide-content">
+                            <img src="./img/Parrot-army-drone.jpeg" alt="Update" class="slide-img" />
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, rerum magnam
+                                libero provident nesciunt maxime ullam. Minima a cupiditate hic. Lorem
+                                ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente
+                                laboriosam, voluptas optio a voluptatibus.
+                            </p>
+                        </div>
+                    </div>
+
                     <div class="slide">
                         <h3>Trip to Sweden</h3>
                         <div class="slide-content">
@@ -226,12 +233,13 @@
                             </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
 
         <!-- Service  -->
-        <div class="section" id="section4">
+        <div class="section" id="section-services">
             <div class="item">
                 <div class="item-container">
                     <span>WHAT WE DO</span>
@@ -270,7 +278,7 @@
         </div>
 
         <!-- Manufacturers  -->
-        <div class="section" id="section5">
+        <div class="section" id="section-manufacturers">
             <div class="item">
                 <div class="item-container">
                     <span>WHO WE PARTNER WITH</span>
@@ -466,11 +474,6 @@
                                     </a>
                                 </div>
                             </div>
-
-
-
-
-                            <!-- Add more logos as needed -->
                         </div>
                     </section>
                 </div>
@@ -478,8 +481,8 @@
         </div>
 
         <!-- Contact Us  -->
-        <div class="section" id="section6">
-            <div class="item slides">
+        <div class="section" id="section-contact">
+            <div class="item">
                 <div class="item-container">
                     <span>READY TO CONNECT?</span>
                     <h1>CONTACT US</h1>
@@ -506,12 +509,12 @@
                             <form>
                                 <div class="form-group">
                                     <label for="name">Your Name:</label>
-                                    <input type="text" id="name" placeholder="Enter your name" />
+                                    <input type="text" id="name" placeholder="Enter your name" autocomplete="name"/>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="email">Your Email:</label>
-                                    <input type="email" id="email" placeholder="Enter your email" />
+                                    <input type="email" id="email" placeholder="Enter your email" autocomplete="email"/>
                                 </div>
 
                                 <div class="form-group">
@@ -525,6 +528,7 @@
                     </section>
                 </div>
             </div>
+
             <!-- Footer -->
             <footer class="footer">
                 <div class="footer-content">
@@ -593,7 +597,9 @@
     <!-- Initialize fullPage.js -->
     <script type="text/javascript">
         var myFullpage = new fullpage("#fullpage", {
+            anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
             licenseKey: "X14MK-GWEQK-9K86I-5JO8I-LJNKO",
+            // menu: '#myMenu',
             autoScrolling: true, // Enables auto-scrolling
             slidesNavigation: false,
             controlArrows: true,

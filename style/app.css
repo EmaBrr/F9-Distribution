@@ -92,17 +92,22 @@ html {
   scrollbar-width: none;
 }
 
+body {
+  margin: 0;
+  background-color: #191919;
+  color: #f8f7f6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
 
-body {
-  margin: 0;
-  background-color: #191919;
-  color: white;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+main {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 header {
@@ -114,51 +119,12 @@ header {
   text-align: center;
 }
 
-main {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   scroll-snap-align: start;
-}
-
-.sub-section {
-  height: 100vh;
-  overflow: auto;
-}
-
-#section1 {
-  background-color: #191919;
-}
-
-#section2,
-#section2-1,
-#section3,
-#section4,
-#section5,
-#section6 {
-  background-color: #2b2b2b;
-}
-
-.fp-watermark {
-  display: none;
-}
-
-#fp-nav {
-  display: block;
-}
-@media screen and (max-width: 1000px) {
-  #fp-nav {
-    display: none;
-  }
-}
-
-.section {
   padding-top: 60px;
   box-sizing: border-box;
 }
@@ -175,63 +141,91 @@ main {
 @media screen and (max-width: 1000px) {
   .section {
     padding-top: 85px;
-    box-sizing: border-box;
   }
 }
 
-#section2 .fp-overflow,
-#section2-1 .fp-overflow,
-#section4 .fp-overflow,
-#section5 .fp-overflow {
+.sub-section {
+  height: 100vh;
+  overflow: auto;
+}
+
+#section-welcome {
+  background-color: #191919;
+}
+#section-welcome .fp-overflow {
   height: 100vh;
   display: flex;
   justify-content: center;
 }
 @media screen and (max-width: 1000px) {
-  #section2 .fp-overflow,
-  #section2-1 .fp-overflow,
-  #section4 .fp-overflow,
-  #section5 .fp-overflow {
+  #section-welcome .fp-overflow {
+    height: 100vh;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #section-welcome {
+    min-height: 500px;
+  }
+}
+
+#section-about,
+#section-values,
+#section-services,
+#section-manufacturers {
+  background-color: #2b2b2b;
+}
+#section-about .fp-overflow,
+#section-values .fp-overflow,
+#section-services .fp-overflow,
+#section-manufacturers .fp-overflow {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  #section-about .fp-overflow,
+  #section-values .fp-overflow,
+  #section-services .fp-overflow,
+  #section-manufacturers .fp-overflow {
+    height: calc(100vh - 85px);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #section-about,
+  #section-values,
+  #section-services,
+  #section-manufacturers {
+    min-height: 700px;
+  }
+}
+
+#section-news,
+#section-contact {
+  background-color: #2b2b2b;
+}
+@media screen and (max-width: 1000px) {
+  #section-news .fp-overflow,
+  #section-contact .fp-overflow {
     height: calc(100vh - 85px);
     box-sizing: border-box;
   }
 }
 
-#section1 .fp-overflow {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+.fp-watermark {
+  display: none;
+}
+
+#fp-nav {
+  display: block;
 }
 @media screen and (max-width: 1000px) {
-  #section1 .fp-overflow {
-    height: 100vh;
-    box-sizing: border-box;
+  #fp-nav {
+    display: none;
   }
 }
 
-@media screen and (max-width: 1000px) {
-  #section1 {
-    min-height: 500px;
-  }
-  #section2 {
-    min-height: 500px;
-  }
-  #section2-1 {
-    min-height: 680px;
-  }
-  #section3 {
-    min-height: 700px;
-  }
-  #section4 {
-    min-height: 640px;
-  }
-  #section5 {
-    min-height: 500px;
-  }
-  #section6 {
-    min-height: 570px;
-  }
-}
 .item {
   display: flex;
   align-items: center;
@@ -781,7 +775,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 @media screen and (max-width: 1092px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 20px 40px;
-    height: 82vh;
   }
 }
 @media screen and (max-width: 985px) {
@@ -2026,6 +2019,10 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 
+#section-contact .item {
+  height: 100vh;
+}
+
 .bg-grain::after {
   content: "";
   position: fixed;
@@ -2038,7 +2035,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   background-repeat: repeat;
   opacity: 0.3;
   pointer-events: none;
-  z-index: -1;
+  z-index: 300000;
   animation: grain 10s steps(10) infinite;
 }
 
