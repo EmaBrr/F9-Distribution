@@ -1495,6 +1495,11 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .slides .item-container .slide {
   min-height: 420px;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-top: 1px solid #b09c86;
+  border-bottom: 1px solid #b09c86;
+  padding: 10px 0px 20px 0px;
 }
 @media screen and (max-width: 1280px) {
   .slides .item-container .slide {
@@ -1639,7 +1644,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .manufacturers-section .manufacturer-description {
   flex: 1;
-  padding: 20px;
+  padding-right: 20px;
   max-width: 40%;
   box-sizing: border-box;
 }
@@ -1699,7 +1704,8 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 .manufacturers-section .manufacturer-description p {
-  text-align: left;
+  text-align: right;
+  color: #f8f7f6;
 }
 @media screen and (max-width: 790px) {
   .manufacturers-section .manufacturer-description p {
@@ -1866,9 +1872,18 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 50%;
+  width: 30%;
   box-sizing: border-box;
-  justify-content: center;
+}
+@media screen and (max-width: 1400px) {
+  .contact-us-section .contact-info {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contact-us-section .contact-info {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 730px) {
   .contact-us-section .contact-info {
@@ -1897,15 +1912,16 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   font-size: 18px;
   color: #b09c86;
 }
-.contact-us-section .contact-info .contact-option h3 {
-  text-align: left;
+.contact-us-section .contact-info .contact-option span {
+  text-align: center;
   padding: 10px 0px;
   margin: 0;
   margin-left: 10px;
   color: #b09c86;
+  padding: 2px;
 }
 @media screen and (max-width: 730px) {
-  .contact-us-section .contact-info .contact-option h3 {
+  .contact-us-section .contact-info .contact-option span {
     margin-left: 5px;
   }
 }
@@ -1915,6 +1931,10 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding: 0;
   margin-top: 5px;
   text-transform: uppercase;
+  color: #f8f7f6;
+}
+.contact-us-section .contact-info p:hover {
+  color: #f8f7f6;
 }
 @media screen and (max-width: 730px) {
   .contact-us-section .contact-info p {
@@ -1926,10 +1946,20 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding: 20px;
   box-sizing: border-box;
   min-width: 300px;
-  width: 50%;
+  width: 70%;
   background-color: #4d4d4d;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1400px) {
+  .contact-us-section .contact-form {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contact-us-section .contact-form {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 730px) {
   .contact-us-section .contact-form {
@@ -2149,8 +2179,8 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 @media (max-width: 920px) {
   .footer .footer-content .footer-contact {
-    width: 90%;
-    padding: 0;
+    width: 100%;
+    padding: 20px;
   }
 }
 .footer .footer-content .footer-contact .contact-details {

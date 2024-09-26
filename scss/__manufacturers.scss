@@ -14,7 +14,7 @@
 
   .manufacturer-description {
     flex: 1;
-    padding: 20px;
+    padding-right: 20px;
     max-width: 40%;
     box-sizing: border-box;
 
@@ -66,7 +66,8 @@
     }
 
     p {
-      text-align: left;
+      text-align: right;
+      color: $white;
 
       @media screen and (max-width: 790px) {
         font-size: 1.15rem;

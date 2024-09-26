@@ -19,6 +19,11 @@
 
     .slide {
       min-height: 420px;
+      justify-content: space-between;
+      margin-top: 20px;
+      border-top: 1px solid $accentcolor;
+      border-bottom: 1px solid $accentcolor;
+      padding: 10px 0px 20px 0px;
 
       @media screen and (max-width: 1280px) {
         min-height: 350px;
