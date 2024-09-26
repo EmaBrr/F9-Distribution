@@ -3,14 +3,12 @@
 
   .welcome {
     display: flex;
-    // align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 20px;
 
     @media screen and (max-width: 1000px) {
-      align-items: center;
-      padding-top: 0px;
+      // align-items: center;
+      // padding-top: 0px;
     }
 
     .welcome-container {
@@ -30,7 +28,7 @@
         background-size: 150%;
         border-radius: 15px;
         padding: 40px 90px;
-        height: 80vh;
+        height: 82vh;
         overflow: hidden;
         width: 100%;
         margin: 0 auto;
@@ -55,31 +53,32 @@
         @media screen and (max-width: 1266px) {
           padding: 30px 60px;
           height: 82vh;
-          max-height: 800px;
+          // max-height: 800px;
         }
 
         @media screen and (max-width: 1092px) {
           padding: 20px 40px;
           height: 82vh;
-          max-height: 700px;
+          // max-height: 700px;
         }
 
         @media screen and (max-width: 985px) {
           padding: 20px 40px;
-          height: 80vh;
-          max-height: 670px;
+          // height: 80vh;
+          // max-height: 670px;
         }
 
         @media screen and (max-width: 790px) {
-          padding:  20px 40px;
+          padding: 20px 40px;
           height: 75vh;
-          max-height: 650px;
+          // max-height: 650px;
         }
 
         @media screen and (max-width: 550px) {
           padding: 15px 20px;
           height: 70vh;
-          max-height: 630px;
+          max-height: 680px;
+          // max-height: 630px;
         }
 
         .text-box {
@@ -204,9 +203,9 @@
 
 @keyframes zoomOut {
   0% {
-    background-size: 120%; 
+    background-size: 120%;
   }
   100% {
-    background-size: cover; 
+    background-size: cover;
   }
 }

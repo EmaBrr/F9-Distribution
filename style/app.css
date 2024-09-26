@@ -728,13 +728,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-top: 20px;
-}
-@media screen and (max-width: 1000px) {
-  .fp-overflow .welcome {
-    align-items: center;
-    padding-top: 0px;
-  }
 }
 .fp-overflow .welcome .welcome-container {
   display: flex;
@@ -754,7 +747,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   background-size: 150%;
   border-radius: 15px;
   padding: 40px 90px;
-  height: 80vh;
+  height: 82vh;
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
@@ -778,35 +771,30 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 30px 60px;
     height: 82vh;
-    max-height: 800px;
   }
 }
 @media screen and (max-width: 1092px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 20px 40px;
     height: 82vh;
-    max-height: 700px;
   }
 }
 @media screen and (max-width: 985px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 20px 40px;
-    height: 80vh;
-    max-height: 670px;
   }
 }
 @media screen and (max-width: 790px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 20px 40px;
     height: 75vh;
-    max-height: 650px;
   }
 }
 @media screen and (max-width: 550px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 15px 20px;
     height: 70vh;
-    max-height: 630px;
+    max-height: 680px;
   }
 }
 .fp-overflow .welcome .welcome-container .headline .text-box {
