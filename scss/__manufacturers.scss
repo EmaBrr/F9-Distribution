@@ -15,7 +15,7 @@
   .manufacturer-description {
     flex: 1;
     padding: 20px;
-    max-width: 50%;
+    max-width: 40%;
     box-sizing: border-box;
 
     @media screen and (max-width: 985px) {
@@ -89,7 +89,7 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
+    max-width: 60%;
     box-sizing: border-box;
 
     @media screen and (max-width: 768px) {
@@ -107,7 +107,7 @@
 
     .logo-item {
       padding: 10px;
-      flex: 1 1 33%;
+      flex: 1 1 25%;
       text-align: center;
 
       .company-logo {
