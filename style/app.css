@@ -200,6 +200,14 @@ header {
     min-height: 700px;
   }
 }
+@media screen and (max-width: 550px) {
+  #section-about,
+  #section-values,
+  #section-services,
+  #section-manufacturers {
+    padding-top: 50px;
+  }
+}
 
 #section-news,
 #section-contact {
@@ -208,8 +216,13 @@ header {
 @media screen and (max-width: 1000px) {
   #section-news .fp-overflow,
   #section-contact .fp-overflow {
-    height: calc(100vh - 85px);
     box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 550px) {
+  #section-news,
+  #section-contact {
+    padding-top: 50px;
   }
 }
 
@@ -1862,7 +1875,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     width: 100%;
     padding: 20px 10px;
     padding-top: 0px;
-    display: none;
   }
 }
 .contact-us-section .contact-info .contact-option {

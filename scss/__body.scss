@@ -97,6 +97,10 @@ header {
   @media screen and (max-width: 1000px) {
     min-height: 700px;
   }
+
+  @media screen and (max-width: 550px) {
+    padding-top: 50px;
+  }
 }
 
 #section-news,
@@ -105,9 +109,13 @@ header {
 
   .fp-overflow {
     @media screen and (max-width: 1000px) {
-      height: calc(100vh - 85px);
+      // height: calc(100vh - 85px);
       box-sizing: border-box;
     }
+  }
+
+  @media screen and (max-width: 550px) {
+    padding-top: 50px;
   }
 }
 
