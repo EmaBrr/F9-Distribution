@@ -6,9 +6,16 @@
     justify-content: center;
     width: 100%;
 
-    @media screen and (max-width: 1000px) {
-      // align-items: center;
-      // padding-top: 0px;
+    @media screen and (max-width: 1200px) {
+      padding-top: 10px;
+    }
+
+    @media screen and (max-width: 985px) {
+      padding-top: 10px;
+    }
+
+    @media screen and (max-width: 790px) {
+      padding-top: 8px;
     }
 
     .welcome-container {
@@ -17,7 +24,7 @@
       width: 100%;
       max-width: 1400px;
 
-      @media screen and (max-width: 1500px) {
+      @media screen and (max-width: 1499px) {
         width: 90%;
       }
 

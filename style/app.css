@@ -729,13 +729,28 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   justify-content: center;
   width: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .fp-overflow .welcome {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 985px) {
+  .fp-overflow .welcome {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 790px) {
+  .fp-overflow .welcome {
+    padding-top: 8px;
+  }
+}
 .fp-overflow .welcome .welcome-container {
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 1400px;
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1499px) {
   .fp-overflow .welcome .welcome-container {
     width: 90%;
   }
