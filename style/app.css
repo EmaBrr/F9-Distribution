@@ -1489,7 +1489,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   width: 88%;
 }
 .slides .item-container p {
-  padding: 0px 20px;
   height: 100%;
   color: #f8f7f6;
 }
@@ -1497,8 +1496,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   min-height: 420px;
   justify-content: space-between;
   margin-top: 20px;
-  border-top: 1px solid #b09c86;
-  border-bottom: 1px solid #b09c86;
   padding: 10px 0px 20px 0px;
 }
 @media screen and (max-width: 1280px) {
@@ -1522,16 +1519,20 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 .slides .item-container .slide h3 {
-  color: #f8f7f6;
   font-family: "Poppins", Sans-serif;
   letter-spacing: 2px;
   width: 100%;
+  color: #b09c86;
 }
 .slides .item-container .slide .slide-content {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   align-items: center;
+  border-top: 1px solid #b09c86;
+  border-bottom: 1px solid #b09c86;
+  padding: 10px 0px;
+  flex-grow: 1;
 }
 .slides .item-container .slide .slide-content .slide-img {
   width: 35%;
@@ -1556,8 +1557,14 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 .slides .item-container .fp-arrow.fp-prev,
 .slides .item-container .fp-arrow.fp-next {
   position: absolute;
-  transform: translateY(70%);
+  transform: translateY(170%);
   cursor: pointer;
+}
+@media screen and (max-width: 1300px) {
+  .slides .item-container .fp-arrow.fp-prev,
+  .slides .item-container .fp-arrow.fp-next {
+    transform: translateY(100%);
+  }
 }
 @media screen and (max-width: 800px) {
   .slides .item-container .fp-arrow.fp-prev,

@@ -12,7 +12,7 @@
     }
 
     p {
-      padding: 0px 20px;
+    //   padding: 0px 20px;
       height: 100%;
       color: $white;
     }
@@ -21,8 +21,6 @@
       min-height: 420px;
       justify-content: space-between;
       margin-top: 20px;
-      border-top: 1px solid $accentcolor;
-      border-bottom: 1px solid $accentcolor;
       padding: 10px 0px 20px 0px;
 
       @media screen and (max-width: 1280px) {
@@ -42,10 +40,11 @@
       }
 
       h3 {
-        color: $white;
+        // color: $white;
         font-family: $font_1;
         letter-spacing: 2px;
         width: 100%;
+        color: $accentcolor;
       }
 
       .slide-content {
@@ -53,6 +52,10 @@
         align-items: flex-start;
         gap: 20px;
         align-items: center;
+        border-top: 1px solid $accentcolor;
+        border-bottom: 1px solid $accentcolor;
+        padding: 10px 0px;
+        flex-grow: 1;
 
         .slide-img {
           width: 35%;
@@ -79,8 +82,12 @@
     .fp-arrow.fp-prev,
     .fp-arrow.fp-next {
       position: absolute;
-      transform: translateY(70%);
+      transform: translateY(170%);
       cursor: pointer;
+
+      @media screen and (max-width: 1300px) {
+        transform: translateY(100%);
+      }
 
       @media screen and (max-width: 800px) {
         transform: translateY(80%);
