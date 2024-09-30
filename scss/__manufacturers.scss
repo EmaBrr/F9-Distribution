@@ -108,8 +108,13 @@
 
     .logo-item {
       padding: 10px;
-      flex: 1 1 25%;
+    //   flex: 1 1 25%;
       text-align: center;
+
+    //   @media screen and (max-width: 440px) {
+    //     flex: 1 1 0%;
+    //   }
+    
 
       .company-logo {
         max-width: 170px;

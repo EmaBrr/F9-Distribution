@@ -1798,7 +1798,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .manufacturers-section .manufacturer-logos .logo-item {
   padding: 10px;
-  flex: 1 1 25%;
   text-align: center;
 }
 .manufacturers-section .manufacturer-logos .logo-item .company-logo {
