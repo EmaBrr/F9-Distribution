@@ -1911,7 +1911,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
   box-sizing: border-box;
   width: 100%;
 }
