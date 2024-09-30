@@ -1914,6 +1914,11 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   box-sizing: border-box;
   width: 100%;
 }
+@media screen and (max-width: 730px) {
+  .contact-us-section {
+    padding: 0px 10px;
+  }
+}
 .contact-us-section .contact-info {
   display: flex;
   flex-direction: column;
