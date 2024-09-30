@@ -1544,6 +1544,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 @media screen and (max-width: 768px) {
   .slides .item-container .slide .slide-content {
     border-bottom: none;
+    border-top: none;
     margin: 0px 30px;
   }
 }
