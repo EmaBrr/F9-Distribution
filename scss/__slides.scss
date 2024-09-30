@@ -7,21 +7,18 @@
     max-width: 1400px;
     width: 90%;
 
-    // .fp-slides {
-    //   width: 88%;
-    // }
-
     p {
-    //   padding: 0px 20px;
       height: 100%;
       color: $white;
+      @media screen and (max-width: 768px) {
+        padding: 0px 5px;
+      }
     }
 
     .slide {
       min-height: 420px;
       justify-content: space-between;
-      margin-top: 20px;
-      padding: 10px 0px 20px 0px;
+      padding: 0px 0px 20px 0px;
 
       @media screen and (max-width: 1280px) {
         min-height: 350px;
@@ -40,7 +37,6 @@
       }
 
       h3 {
-        // color: $white;
         font-family: $font_1;
         letter-spacing: 2px;
         width: 100%;
@@ -54,8 +50,22 @@
         align-items: center;
         border-top: 1px solid $accentcolor;
         border-bottom: 1px solid $accentcolor;
-        padding: 10px 0px;
         flex-grow: 1;
+        margin: 0px 60px;
+        padding: 10px 0px;
+
+        @media screen and (max-width: 1000px) {
+          margin: 0px 50px;
+        }
+
+        @media screen and (max-width: 768px) {
+          border-bottom: none;
+          margin: 0px 30px;
+        }
+
+        @media screen and (max-width: 550px) {
+          margin: 0px 15px;
+        }
 
         .slide-img {
           width: 35%;
@@ -74,6 +84,27 @@
 
           @media screen and (max-width: 768px) {
             text-align: center;
+          }
+        }
+
+        a {
+          color: $accentcolor;
+          font-family: $font_2;
+          font-size: 1.1rem;
+          margin-top: 15px;
+          display: block;
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            text-align: center;
+          }
+
+          @media screen and (max-width: 440px) {
+            font-size: 0.9rem;
+          }
+
+          &:hover {
+            color: $accentcolor;
           }
         }
       }
