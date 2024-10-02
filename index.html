@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="./style/app.css" />
     <!-- JS code -->
     <script src="./js/main.js" defer></script>
+    <!-- Map  -->
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <link href="./dist/svgMap.css" rel="stylesheet" />
+    <script src="./dist/svgMap.js"></script>
     <title>F9 Defence Distribution</title>
 </head>
 
@@ -241,6 +245,111 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+
+        <!-- Map  -->
+        <div class="section" id="section-map">
+            <div class="item">
+                <div class="item-container">
+                    <span>Where Our Brands Operate</span>
+                    <h1>Brands Across Countries</h1>
+                    <div class="demo-wrapper">
+                        <div class="demo-container">
+                            <div id="svgMapEuroCurrency"></div>
+                            <script>
+                                function getZoomAndPan() {
+                                    var screenWidth = window.innerWidth;
+
+                                    if (screenWidth > 1200) {
+                                        // For large screens (e.g., desktops)
+                                        return { zoom: 10, panX: 540, panY: 75 };
+                                    } else if (screenWidth > 1000) {
+                                        // For medium screens (e.g., tablets)
+                                        return { zoom: 9, panX: 540, panY: 70 };
+                                    } else if (screenWidth > 768) {
+                                        // For medium screens (e.g., tablets)
+                                        return { zoom: 9, panX: 470, panY: 63 };
+                                    } else if (screenWidth > 248) {
+                                        // For medium screens (e.g., tablets)
+                                        return { zoom: 8, panX: 177, panY: 23 };
+                                    }else {
+                                        // For small screens (e.g., mobile)
+                                        return { zoom: 9, panX: 260, panY: 35 };
+                                    }
+                                }
+
+                                // Function to initialize the svgMap
+                                function initializeMap() {
+                                    var zoomAndPan = getZoomAndPan();
+
+                                    // Clear the map if already initialized
+                                    document.getElementById('svgMapEuroCurrency').innerHTML = '';
+
+                                    // Initialize the map
+                                    var svgMapEuroCurrency = new svgMap({
+                                        targetElementID: 'svgMapEuroCurrency',
+                                        data: {
+                                            data: {
+                                                brand: {}
+                                            },
+                                            applyData: 'brand',
+                                            values: {
+                                                EE: { brand: 'Brand Estonia' }, // Estonia
+                                                LV: { brand: 'Brand Latvia' },  // Latvia
+                                                LT: { brand: 'Brand Lithuania' }, // Lithuania
+                                                SE: { brand: 'Brand Sweden' }, // Sweden
+                                                FI: { brand: 'Brand Finland' }, // Finland
+                                            }
+                                        },
+                                        colorMin: '#E2E2E2',
+                                        colorMax: '#b09c86',
+                                        colorNoData: '#E2E2E2',
+                                        initialZoom: zoomAndPan.zoom,
+                                        initialPan: {
+                                            x: zoomAndPan.panX,
+                                            y: zoomAndPan.panY,
+                                        },
+                                        mouseWheelZoomEnabled: true,
+                                        mouseWheelZoomWithKey: true,
+                                        onGetTooltip: function (tooltipDiv, countryID, countryValues) {
+                                            var countries = svgMapEuroCurrency.countries;
+                                            var tooltipContentElement = document.createElement('div');
+                                            tooltipContentElement.style.padding = '16px 24px';
+
+                                            var innerHTML =
+                                                '<div style="margin: 0 0 10px; text-align: center"><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg" alt="" style="height: 40px; width: auto; border: 2px solid #eee"></div>'.replace(
+                                                    '{0}', countryID.toLowerCase());
+
+                                            innerHTML +=
+                                                '<div style="min-width: 180px; font-weight: bold; margin: 0 0 15px; text-align: center">' +
+                                                countries[countryID] +
+                                                '</div>';
+
+                                            if (countryValues && countryValues.brand) {
+                                                innerHTML +=
+                                                    '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
+                                                    countryValues.brand +
+                                                    '</div>';
+                                            }
+
+                                            tooltipContentElement.innerHTML = innerHTML;
+                                            return tooltipContentElement;
+                                        }
+                                    });
+                                }
+
+                                // Initialize the map on page load
+                                initializeMap();
+
+                                // Add an event listener to adjust zoom and pan on window resize
+                                window.addEventListener('resize', function () {
+                                    initializeMap(); // Reinitialize the map on resize
+                                });
+                            </script>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -605,7 +714,7 @@
     <!-- Initialize fullPage.js -->
     <script type="text/javascript">
         var myFullpage = new fullpage("#fullpage", {
-            anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
+            anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8'],
             licenseKey: "X14MK-GWEQK-9K86I-5JO8I-LJNKO",
             autoScrolling: true,
             slidesNavigation: false,
@@ -620,6 +729,7 @@
             paddingBottom: '0px'
         });
     </script>
+
 </body>
 
 </html>

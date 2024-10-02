@@ -172,12 +172,14 @@ header {
 #section-about,
 #section-values,
 #section-services,
+#section-map,
 #section-manufacturers {
   background-color: #2b2b2b;
 }
 #section-about .fp-overflow,
 #section-values .fp-overflow,
 #section-services .fp-overflow,
+#section-map .fp-overflow,
 #section-manufacturers .fp-overflow {
   height: 100vh;
   display: flex;
@@ -187,6 +189,7 @@ header {
   #section-about .fp-overflow,
   #section-values .fp-overflow,
   #section-services .fp-overflow,
+  #section-map .fp-overflow,
   #section-manufacturers .fp-overflow {
     height: calc(100vh - 85px);
     box-sizing: border-box;
@@ -196,6 +199,7 @@ header {
   #section-about,
   #section-values,
   #section-services,
+  #section-map,
   #section-manufacturers {
     min-height: 700px;
   }
@@ -204,6 +208,7 @@ header {
   #section-about,
   #section-values,
   #section-services,
+  #section-map,
   #section-manufacturers {
     padding-top: 50px;
   }
@@ -1904,6 +1909,60 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 
 .logo-item:hover .company-logo {
   transform: scale(1.1);
+}
+
+body {
+  font-family: sans-serif;
+  color: #000;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.demo-wrapper {
+  box-sizing: border-box;
+  width: 1000px;
+  max-width: calc(100% - 30px);
+  margin: auto;
+  padding: 30px 0 0;
+}
+@media screen and (max-width: 800px) {
+  .demo-wrapper {
+    width: 600px;
+    max-width: calc(100% - 5px);
+  }
+}
+
+.demo-container {
+  padding: 0 0 80px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 25px;
+  font-weight: normal;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+.svgMap-map-wrapper {
+  border-radius: 8px;
+}
+
+.demo-container {
+  padding: 0;
 }
 
 .contact-us-section {
