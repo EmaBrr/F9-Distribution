@@ -809,7 +809,6 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 @media screen and (max-width: 550px) {
   .fp-overflow .welcome .welcome-container .headline {
     padding: 15px 20px;
-    height: 70vh;
     max-height: 680px;
   }
 }
@@ -875,6 +874,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 2px;
+  text-align: left;
 }
 @media screen and (max-width: 1266px) {
   .fp-overflow .welcome .welcome-container .headline .text-box h2 {
