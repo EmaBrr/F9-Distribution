@@ -115,6 +115,7 @@
         font-family: $font_1;
         font-size: 1rem;
         text-transform: uppercase;
+        color: $white;
 
         @media screen and (max-width: 730px) {
           font-size: 0.9rem;

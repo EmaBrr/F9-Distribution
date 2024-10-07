@@ -2084,6 +2084,7 @@ h2 {
   font-family: "Poppins", Sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
+  color: #f8f7f6;
 }
 @media screen and (max-width: 730px) {
   .contact-us-section .contact-form .form-group label {
