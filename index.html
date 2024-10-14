@@ -499,108 +499,19 @@
         </div>
 
         <!-- Map Section -->
-        <!-- <div class="section" id="section-map">
+        <div class="section" id="section-map">
             <div class="item">
                 <div class="item-container">
                     <span>Where Our Brands Operate</span>
                     <h1>Brands Across Countries</h1>
                     <div class="demo-wrapper">
-                        <div class="demo-container" onclick="openMapModal()">
-                            <div id="svgMapEuroCurrency"></div>
+                        <div class="demo-container">
+                            <div id="svgMapBrand"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
-
-        <!-- Modal for the map -->
-        <!-- <div id="mapModal" class="map-modal">
-            <span class="close-button" onclick="closeMapModal()">&times;</span>
-            <div class="modal-content">
-                <div id="svgMapEuroCurrencyModal"></div>
-            </div>
         </div>
-
-        <script>
-            // Function to calculate zoom and pan settings based on screen size
-            function getZoomAndPan() {
-                var screenWidth = window.innerWidth;
-
-                if (screenWidth > 1200) {
-                    // For large screens (e.g., desktops)
-                    return { zoom: 10, panX: 540, panY: 75 };
-                } else if (screenWidth > 1000) {
-                    // For medium screens (e.g., tablets)
-                    return { zoom: 9, panX: 540, panY: 70 };
-                } else if (screenWidth > 768) {
-                    // For medium screens (e.g., smaller tablets)
-                    return { zoom: 9, panX: 470, panY: 63 };
-                } else if (screenWidth > 248) {
-                    // For very small screens (e.g., mobile)
-                    return { zoom: 8, panX: 177, panY: 23 };
-                } else {
-                    // For smallest screens
-                    return { zoom: 9, panX: 260, panY: 35 };
-                }
-            }
-
-            // Initialize the map on primary container
-            function initializePrimaryMap() {
-                const zoomAndPan = getZoomAndPan();
-
-                new svgMap({
-                    targetElementID: 'svgMapEuroCurrency',
-                    data: {
-                        data: { brand: {} },
-                        applyData: 'brand',
-                        values: {
-                            EE: { brand: 'Brand Estonia' },
-                            LV: { brand: 'Brand Latvia' },
-                            LT: { brand: 'Brand Lithuania' },
-                            SE: { brand: 'Brand Sweden' },
-                            FI: { brand: 'Brand Finland' },
-                        }
-                    },
-                    colorMin: '#E2E2E2',
-                    colorMax: '#b09c86',
-                    colorNoData: '#E2E2E2',
-                    initialZoom: zoomAndPan.zoom,
-                    initialPan: { x: zoomAndPan.panX, y: zoomAndPan.panY },
-                    mouseWheelZoomEnabled: true,
-                    mouseWheelZoomWithKey: true,
-                    onGetTooltip: function (tooltipDiv, countryID, countryValues) {
-                        const tooltipContentElement = document.createElement('div');
-                        tooltipContentElement.style.padding = '16px 24px';
-
-                        let innerHTML =
-                            '<div style="margin: 0 0 10px; text-align: center"><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg" alt="" style="height: 40px; width: auto; border: 2px solid #eee"></div>'.replace(
-                                '{0}', countryID.toLowerCase());
-
-                        // Check if the country name exists, otherwise provide a fallback name
-                        const countryName = svgMap.prototype.countries[countryID] || "Unknown Country";
-                        innerHTML +=
-                            '<div style="min-width: 180px; font-weight: bold; margin: 0 0 15px; text-align: center">' +
-                            countryName +
-                            '</div>';
-
-                        if (countryValues && countryValues.brand) {
-                            innerHTML +=
-                                '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
-                                countryValues.brand +
-                                '</div>';
-                        }
-
-                        tooltipContentElement.innerHTML = innerHTML;
-                        return tooltipContentElement;
-                    }
-
-                });
-            }
-
-            // Call the primary map initialization on page load
-            initializePrimaryMap();
-            window.addEventListener('resize', initializePrimaryMap);
-        </script> -->
 
         <!-- Map  -->
         <div class="section" id="section-map">
@@ -700,7 +611,7 @@
                                 window.addEventListener('resize', function () {
                                     initializeMap(); // Reinitialize the map on resize
                                 });
-                                
+
                                 document.getElementById('svgMapBrand').addEventListener('mouseenter', function () {
                                     fullpage_api.setAllowScrolling(false);
                                 });
