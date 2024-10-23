@@ -1954,6 +1954,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 
 .demo-container {
   padding: 0 0 80px;
+  color: black;
 }
 
 h2 {
@@ -1961,6 +1962,7 @@ h2 {
   font-size: 32px;
   margin: 0 0 25px;
   font-weight: normal;
+  color: black;
 }
 
 @media (max-width: 900px) {
@@ -1989,6 +1991,7 @@ h2 {
   left: 0;
   top: 0;
   width: 100%;
+  color: black;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
@@ -2006,7 +2009,7 @@ h2 {
   position: absolute;
   top: 10px;
   right: 20px;
-  color: #fff;
+  color: black;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
@@ -2023,6 +2026,7 @@ h2 {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  color: black;
 }
 
 .map-popup-content {
@@ -2043,6 +2047,41 @@ h2 {
   cursor: pointer;
 }
 
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Width of the modal */
+}
+
+.close {
+  color: #aaa;
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal styles */
 .contact-us-section {
   display: flex;
   flex-wrap: wrap;

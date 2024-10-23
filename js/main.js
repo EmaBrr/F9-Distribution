@@ -117,4 +117,64 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", adjustPadding);
 });
 
-// Map
+
+// function initializeMap() {
+//   console.log("Initializing map..."); // Debug log
+//   var zoomAndPan = getZoomAndPan();
+  
+//   // Clear the map if already initialized
+//   document.getElementById('svgMapBrand').innerHTML = '';
+
+//   // Initialize the map
+//   var svgMapBrand = new svgMap({
+//       targetElementID: 'svgMapBrand',
+//       data: {
+//           data: {
+//               brand: {}
+//           },
+//           applyData: 'brand',
+//           values: {
+//               EE: { brand: 'Brand Estonia' },
+//               LV: { brand: 'Brand Latvia' },
+//               LT: { brand: 'Brand Lithuania' },
+//               SE: { brand: 'Brand Sweden' },
+//               FI: { brand: 'Brand Finland' },
+//           }
+//       },
+//       colorMin: '#E2E2E2',
+//       colorMax: '#b09c86',
+//       colorNoData: '#E2E2E2',
+//       initialZoom: zoomAndPan.zoom,
+//       initialPan: {
+//           x: zoomAndPan.panX,
+//           y: zoomAndPan.panY,
+//       },
+//       mouseWheelZoomEnabled: true,
+//       mouseWheelZoomWithKey: true,
+//       onGetTooltip: function (tooltipDiv, countryID, countryValues) {
+//           var countries = svgMapBrand.countries;
+//           var tooltipContentElement = document.createElement('div');
+//           tooltipContentElement.style.padding = '16px 24px';
+
+//           var innerHTML =
+//               '<div style="margin: 0 0 10px; text-align: center"><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg" alt="" style="height: 40px; width: auto; border: 2px solid #eee"></div>'.replace(
+//                   '{0}', countryID.toLowerCase());
+
+//           innerHTML +=
+//               '<div style="min-width: 180px; font-weight: bold; margin: 0 0 15px; text-align: center">' +
+//               countries[countryID] +
+//               '</div>';
+
+//           if (countryValues && countryValues.brand) {
+//               innerHTML +=
+//                   '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
+//                   countryValues.brand +
+//                   '</div>';
+//           }
+
+//           tooltipContentElement.innerHTML = innerHTML;
+//           return tooltipContentElement;
+//       }
+//   });
+//   console.log("Map initialized successfully."); // Debug log
+// }
