@@ -144,7 +144,7 @@ function getZoomAndPan() {
   } else if (screenWidth > 400) {
     return { zoom: 10, panX: 170, panY: 95 };
   } else {
-    return { zoom: 10, panX: 155, panY: 115 };
+    return { zoom: 12, panX: 165, panY: 110 };
   }
 }
 

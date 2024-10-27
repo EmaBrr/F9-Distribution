@@ -1992,7 +1992,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 @media (max-width: 400px) {
   .demo-wrapper {
-    width: 320px;
+    width: 340px;
   }
 }
 .demo-wrapper .svgMap-map-wrapper {
@@ -2107,6 +2107,7 @@ h2 {
   margin-top: 5px;
   text-transform: uppercase;
   color: #f8f7f6;
+  text-decoration: none;
 }
 .contact-us-section .contact-info p:hover {
   color: #f8f7f6;
@@ -2115,6 +2116,10 @@ h2 {
   .contact-us-section .contact-info p {
     text-align: center;
   }
+}
+.contact-us-section .contact-info a {
+  color: inherit;
+  text-decoration: none;
 }
 .contact-us-section .contact-form {
   flex: 1;

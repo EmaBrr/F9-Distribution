@@ -71,6 +71,7 @@
       margin-top: 5px;
       text-transform: uppercase;
       color: $white;
+      text-decoration: none; 
 
       &:hover {
         color: $white;
@@ -79,6 +80,11 @@
       @media screen and (max-width: 730px) {
         text-align: center;
       }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none; 
     }
   }
 
