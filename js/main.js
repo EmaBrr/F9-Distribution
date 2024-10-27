@@ -117,77 +117,118 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", adjustPadding);
 });
 
+// Map
+function getZoomAndPan() {
+  var screenWidth = window.innerWidth;
 
-// Map 
-// Initialize the map
-var svgMapEuroCurrency = new svgMap({
-  targetElementID: 'svgMapEuroCurrency',
-  data: {
-    data: {
-      brand: {} 
-    },
-    applyData: 'brand',
-    values: {
-      EE: { brand: 'Brand Estonia' }, 
-      LV: { brand: 'Brand Latvia' },  
-      LT: { brand: 'Brand Lithuania' }, 
-      SE: { brand: 'Brand Sweden' }, 
-      FI: { brand: 'Brand Finland' }, 
-    }
-  },
-  colorMin: '#E2E2E2',
-  colorMax: '#b09c86',
-  colorNoData: '#E2E2E2',
-  initialZoom: 8, 
-  initialPan: {
-    x: 430, 
-    y: 55,  
-  },
-  mouseWheelZoomEnabled: true,
-  mouseWheelZoomWithKey: true,
-  onGetTooltip: function (tooltipDiv, countryID, countryValues) {
-    var countries = svgMapEuroCurrency.countries;
-    var tooltipContentElement = document.createElement('div');
-    tooltipContentElement.style.padding = '16px 24px';
-
-    var innerHTML =
-      '<div style="margin: 0 0 10px; text-align: center"><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg" alt="" style="height: 40px; width: auto; border: 2px solid #eee"></div>'.replace(
-        '{0}', countryID.toLowerCase());
-
-    innerHTML +=
-      '<div style="min-width: 180px; font-weight: bold; margin: 0 0 15px; text-align: center">' +
-      countries[countryID] +
-      '</div>';
-
-    if (countryValues && countryValues.brand) {
-      innerHTML +=
-        '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
-        countryValues.brand +
-        '</div>';
-    }
-
-    tooltipContentElement.innerHTML = innerHTML;
-    return tooltipContentElement;
+  if (screenWidth > 1300) {
+    return { zoom: 9, panX: 520, panY: 70 };
+  } else if (screenWidth > 1200) {
+    return { zoom: 9, panX: 470, panY: 62 };
+  } else if (screenWidth > 1000) {
+    return { zoom: 9, panX: 470, panY: 62 };
+  } else if (screenWidth > 780) {
+    return { zoom: 8, panX: 360, panY: 80 };
+  } else if (screenWidth > 680) {
+    return { zoom: 8, panX: 305, panY: 100 };
+  } else if (screenWidth > 620) {
+    return { zoom: 8, panX: 280, panY: 105 };
+  } else if (screenWidth > 540) {
+    return { zoom: 8, panX: 240, panY: 95 };
+  } else if (screenWidth > 490) {
+    return { zoom: 8, panX: 215, panY: 80 };
+  } else if (screenWidth > 450) {
+    return { zoom: 8, panX: 200, panY: 80 };
+  } else if (screenWidth > 420) {
+    return { zoom: 8, panX: 190, panY: 90 };
+  } else if (screenWidth > 400) {
+    return { zoom: 10, panX: 170, panY: 95 };
+  } else {
+    return { zoom: 10, panX: 155, panY: 115 };
   }
+}
+
+// Function to initialize or reinitialize the map with dynamic zoom and pan settings
+function initializeMap() {
+  var zoomAndPan = getZoomAndPan(); // Get responsive zoom and pan values
+
+  // Clear the existing map content (if any)
+  document.getElementById("svgMapEuroCurrency").innerHTML = "";
+
+  // Initialize the map with dynamic zoom and pan settings
+  var svgMapEuroCurrency = new svgMap({
+    targetElementID: "svgMapEuroCurrency",
+    data: {
+      data: {
+        brand: {},
+      },
+      applyData: "brand",
+      values: {
+        EE: { brand: "Brand Estonia" },
+        LV: { brand: "Brand Latvia" },
+        LT: { brand: "Brand Lithuania" },
+        SE: { brand: "Brand Sweden" },
+        FI: { brand: "Brand Finland" },
+      },
+    },
+    colorMin: "#E2E2E2",
+    colorMax: "#b09c86",
+    colorNoData: "#E2E2E2",
+    initialZoom: zoomAndPan.zoom,
+    initialPan: {
+      x: zoomAndPan.panX,
+      y: zoomAndPan.panY,
+    },
+    mouseWheelZoomEnabled: true,
+    mouseWheelZoomWithKey: true,
+    onGetTooltip: function (tooltipDiv, countryID, countryValues) {
+      var countries = svgMapEuroCurrency.countries;
+      var tooltipContentElement = document.createElement("div");
+      tooltipContentElement.style.padding = "16px 24px";
+      tooltipContentElement.style.color = "black";
+      tooltipContentElement.style.fontFamily = "Poppins";
+
+      var innerHTML =
+        '<div style="margin: 0 0 10px; text-align: center"><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg" alt="" style="height: 40px; width: auto; border: 2px solid #eee"></div>'.replace(
+          "{0}",
+          countryID.toLowerCase()
+        );
+
+      innerHTML +=
+        '<div style="min-width: 180px; font-weight: bold; margin: 0 0 15px; text-align: center">' +
+        countries[countryID] +
+        "</div>";
+
+      if (countryValues && countryValues.brand) {
+        innerHTML +=
+          '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
+          countryValues.brand +
+          "</div>";
+      }
+
+      tooltipContentElement.innerHTML = innerHTML;
+      return tooltipContentElement;
+    },
+  });
+}
+
+// Disable fullPage.js scrolling on map interaction
+const mapContainer = document.getElementById("svgMapEuroCurrency");
+mapContainer.addEventListener("mouseenter", () => {
+  fullpage_api.setAllowScrolling(false);
+});
+mapContainer.addEventListener("mouseleave", () => {
+  fullpage_api.setAllowScrolling(true);
+});
+mapContainer.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(false);
+});
+mapContainer.addEventListener("touchend", () => {
+  fullpage_api.setAllowScrolling(true);
 });
 
-// Get the map container
-const mapContainer = document.getElementById('svgMapEuroCurrency');
+// Reinitialize map on window resize for responsiveness
+window.addEventListener("resize", initializeMap);
 
-// Disable fullPage.js scrolling when interacting with the map
-mapContainer.addEventListener('mouseenter', () => {
-    fullpage_api.setAllowScrolling(false); // Disable scrolling on mouse enter
-});
-
-mapContainer.addEventListener('mouseleave', () => {
-    fullpage_api.setAllowScrolling(true); // Enable scrolling on mouse leave
-});
-
-// Touch support for mobile users
-mapContainer.addEventListener('touchstart', () => {
-    fullpage_api.setAllowScrolling(false); // Disable scrolling on touch start
-});
-
-mapContainer.addEventListener('touchend', () => {
-    fullpage_api.setAllowScrolling(true); // Enable scrolling on touch end
-});
+// Initial map load
+document.addEventListener("DOMContentLoaded", initializeMap);

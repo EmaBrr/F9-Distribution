@@ -1938,27 +1938,80 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   transform: scale(1.1);
 }
 
-body {
-  font-family: sans-serif;
-  color: #000;
-  background: #fff;
-  padding: 0;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
-}
-
 .demo-wrapper {
   box-sizing: border-box;
-  width: 800px;
+  width: 1000px;
   max-width: calc(100% - 30px);
   margin: auto;
   padding: 30px 0 0;
 }
-
-.demo-container {
-  padding: 0 0 80px;
+@media (max-width: 1300px) {
+  .demo-wrapper {
+    width: 900px;
+  }
+}
+@media (max-width: 1000px) {
+  .demo-wrapper {
+    width: 700px;
+  }
+}
+@media (max-width: 780px) {
+  .demo-wrapper {
+    width: 600px;
+  }
+}
+@media (max-width: 680px) {
+  .demo-wrapper {
+    width: 550px;
+  }
+}
+@media (max-width: 620px) {
+  .demo-wrapper {
+    width: 480px;
+  }
+}
+@media (max-width: 540px) {
+  .demo-wrapper {
+    width: 430px;
+  }
+}
+@media (max-width: 490px) {
+  .demo-wrapper {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .demo-wrapper {
+    width: 380px;
+  }
+}
+@media (max-width: 420px) {
+  .demo-wrapper {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .demo-wrapper {
+    width: 320px;
+  }
+}
+.demo-wrapper .svgMap-map-wrapper {
+  height: 400px;
+}
+@media (max-width: 620px) {
+  .demo-wrapper .svgMap-map-wrapper {
+    height: 350px;
+  }
+}
+@media (max-width: 540px) {
+  .demo-wrapper .svgMap-map-wrapper {
+    height: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .demo-wrapper .svgMap-map-wrapper {
+    height: 330px;
+  }
 }
 
 h2 {
