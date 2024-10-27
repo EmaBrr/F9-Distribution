@@ -118,63 +118,89 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// function initializeMap() {
-//   console.log("Initializing map..."); // Debug log
-//   var zoomAndPan = getZoomAndPan();
-  
-//   // Clear the map if already initialized
-//   document.getElementById('svgMapBrand').innerHTML = '';
+// Map 
 
-//   // Initialize the map
-//   var svgMapBrand = new svgMap({
-//       targetElementID: 'svgMapBrand',
-//       data: {
-//           data: {
-//               brand: {}
-//           },
-//           applyData: 'brand',
-//           values: {
-//               EE: { brand: 'Brand Estonia' },
-//               LV: { brand: 'Brand Latvia' },
-//               LT: { brand: 'Brand Lithuania' },
-//               SE: { brand: 'Brand Sweden' },
-//               FI: { brand: 'Brand Finland' },
-//           }
-//       },
-//       colorMin: '#E2E2E2',
-//       colorMax: '#b09c86',
-//       colorNoData: '#E2E2E2',
-//       initialZoom: zoomAndPan.zoom,
-//       initialPan: {
-//           x: zoomAndPan.panX,
-//           y: zoomAndPan.panY,
-//       },
-//       mouseWheelZoomEnabled: true,
-//       mouseWheelZoomWithKey: true,
-//       onGetTooltip: function (tooltipDiv, countryID, countryValues) {
-//           var countries = svgMapBrand.countries;
-//           var tooltipContentElement = document.createElement('div');
-//           tooltipContentElement.style.padding = '16px 24px';
+function getZoomAndPan() {
+  var screenWidth = window.innerWidth;
 
-//           var innerHTML =
-//               '<div style="margin: 0 0 10px; text-align: center"><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg" alt="" style="height: 40px; width: auto; border: 2px solid #eee"></div>'.replace(
-//                   '{0}', countryID.toLowerCase());
+  if (screenWidth > 1200) {
+      return { zoom: 10, panX: 500, panY: 70 };
+  } else if (screenWidth > 1000) {
+      return { zoom: 9, panX: 540, panY: 70 };
+  } else if (screenWidth > 768) {
+      return { zoom: 9, panX: 470, panY: 63 };
+  } else if (screenWidth > 248) {
+      return { zoom: 8, panX: 177, panY: 23 };
+  } else {
+      return { zoom: 9, panX: 260, panY: 35 };
+  }
+}
+document.querySelectorAll('.map-item').forEach(logo => {
+  logo.addEventListener('click', function () {
+      const popup = this.querySelector('.popup-map');
+      popup.style.display = 'block'; 
 
-//           innerHTML +=
-//               '<div style="min-width: 180px; font-weight: bold; margin: 0 0 15px; text-align: center">' +
-//               countries[countryID] +
-//               '</div>';
+      if (!popup.querySelector('#svgMapPopup svg')) {
+          var zoomAndPan = getZoomAndPan(); 
 
-//           if (countryValues && countryValues.brand) {
-//               innerHTML +=
-//                   '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
-//                   countryValues.brand +
-//                   '</div>';
-//           }
+          var svgMapPopup = new svgMap({
+              targetElementID: 'svgMapPopup', 
+              data: {
+                  data: {
+                      brand: {}
+                  },
+                  applyData: 'brand',
+                  values: {
+                      EE: { brand: 'Brand Estonia' },
+                      LV: { brand: 'Brand Latvia' },
+                      LT: { brand: 'Brand Lithuania' },
+                      SE: { brand: 'Brand Sweden' },
+                      FI: { brand: 'Brand Finland' },
+                  }
+              },
+              colorMin: '#E2E2E2',
+              colorMax: '#b09c86',
+              colorNoData: '#E2E2E2',
+              initialZoom: zoomAndPan.zoom, 
+              initialPan: {
+                  x: zoomAndPan.panX,
+                  y: zoomAndPan.panY, 
+              },
+              mouseWheelZoomEnabled: true,
+              mouseWheelZoomWithKey: true,
+              onGetTooltip: function (tooltipDiv, countryID, countryValues) {
+                  var countries = svgMapPopup.countries;
+                  var tooltipContentElement = document.createElement('div');
+                  tooltipContentElement.style.padding = '16px 24px';
+                  tooltipContentElement.style.color = 'black';
+                  tooltipContentElement.style.fontFamily = 'Poppins';
 
-//           tooltipContentElement.innerHTML = innerHTML;
-//           return tooltipContentElement;
-//       }
-//   });
-//   console.log("Map initialized successfully."); // Debug log
-// }
+                  var innerHTML =
+                      '<div style="margin: 0 0 10px; text-align: center"><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg" alt="" style="height: 40px; width: auto; border: 2px solid #eee"></div>'.replace(
+                          '{0}', countryID.toLowerCase());
+
+                  innerHTML +=
+                      '<div style="min-width: 180px; font-weight: bold; margin: 0 0 15px; text-align: center">' +
+                      countries[countryID] +
+                      '</div>';
+
+                  if (countryValues && countryValues.brand) {
+                      innerHTML +=
+                          '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
+                          countryValues.brand +
+                          '</div>';
+                  }
+
+                  tooltipContentElement.innerHTML = innerHTML;
+                  return tooltipContentElement;
+              }
+          });
+      }
+  });
+});
+
+document.querySelectorAll('.close-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+      this.closest('.popup-map').style.display = 'none';
+  });
+});
