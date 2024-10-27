@@ -164,11 +164,11 @@ function initializeMap() {
       },
       applyData: "brand",
       values: {
-        EE: { brand: "Brand Estonia" },
-        LV: { brand: "Brand Latvia" },
-        LT: { brand: "Brand Lithuania" },
-        SE: { brand: "Brand Sweden" },
-        FI: { brand: "Brand Finland" },
+        EE: { brand: "Snigel" },
+        LV: { brand: "Teledyne" },
+        LT: { brand: "Parrot" },
+        SE: { brand: "Brand1" },
+        FI: { brand: "Brand2" },
       },
     },
     colorMin: "#E2E2E2",
@@ -232,3 +232,16 @@ window.addEventListener("resize", initializeMap);
 
 // Initial map load
 document.addEventListener("DOMContentLoaded", initializeMap);
+
+// Slide
+
+function openModal(event) {
+  const modal = event.target.closest(".slide").querySelector(".slide-modal");
+  modal.style.display = "block";  // Show modal
+}
+
+function closeModal() {
+  document.querySelectorAll(".slide-modal").forEach((modal) => {
+    modal.style.display = "none";  // Hide all modals
+  });
+}
