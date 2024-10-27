@@ -1938,81 +1938,46 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   transform: scale(1.1);
 }
 
-.map-section {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  box-sizing: border-box;
-}
-@media screen and (max-width: 985px) {
-  .map-section {
-    padding: 10px;
-  }
-}
-@media screen and (max-width: 440px) {
-  .map-section {
-    padding: 0;
-  }
-}
-.map-section .map-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-.map-section .map-container .map-item {
-  padding: 10px;
-  text-align: center;
-}
-.map-section .map-container .map-item .map-img {
-  max-width: 1000px;
-  width: 80%;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-@media screen and (max-width: 1000px) {
-  .map-section .map-container .map-item .map-img {
-    width: 80%;
-  }
-}
-.map-section .map-container .map-item .popup-map {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  padding: 25px;
-  background-color: black;
-  color: white;
-  border-radius: 8px;
-  z-index: 10;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-@media screen and (max-width: 985px) {
-  .map-section .map-container .map-item .popup-map {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 555px) {
-  .map-section .map-container .map-item .popup-map {
-    width: 90%;
-  }
-}
-.map-section .map-container .map-item .popup-map .close-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-  color: #f8f7f6 !important;
-  border-bottom: none;
+body {
+  font-family: sans-serif;
+  color: #000;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
+.demo-wrapper {
+  box-sizing: border-box;
+  width: 800px;
+  max-width: calc(100% - 30px);
+  margin: auto;
+  padding: 30px 0 0;
+}
+
+.demo-container {
+  padding: 0 0 80px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 25px;
+  font-weight: normal;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 18px;
+  }
+}
 .contact-us-section {
   display: flex;
   flex-wrap: wrap;
