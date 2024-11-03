@@ -65,41 +65,6 @@ function applyZoomEffect() {
 window.addEventListener("load", applyZoomEffect);
 window.addEventListener("resize", applyZoomEffect);
 
-// Brands:
-
-document.addEventListener("DOMContentLoaded", function () {
-  const logoItems = document.querySelectorAll(".logo-item");
-  const popups = document.querySelectorAll(".popup");
-
-  logoItems.forEach((logoItem) => {
-    logoItem.addEventListener("click", function (e) {
-      e.stopPropagation();
-      hideAllPopups();
-      const popup = logoItem.querySelector(".popup");
-      if (popup) {
-        popup.style.display = "block";
-      }
-    });
-  });
-
-  document.querySelectorAll(".close-btn").forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      hideAllPopups();
-    });
-  });
-
-  document.addEventListener("click", function () {
-    hideAllPopups();
-  });
-
-  function hideAllPopups() {
-    popups.forEach((popup) => {
-      popup.style.display = "none";
-    });
-  }
-});
-
 // Slide content and navigation
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -164,11 +129,41 @@ function initializeMap() {
       },
       applyData: "brand",
       values: {
-        EE: { brand: "Snigel" },
-        LV: { brand: "Teledyne" },
-        LT: { brand: "Parrot" },
-        SE: { brand: "Brand1" },
-        FI: { brand: "Brand2" },
+        EE: {
+          brand: [
+            "AgEagle",
+            " Parrot",
+            " Peli",
+            " Quantum Systems",
+            " Reveal",
+            " Teledyne",
+            " Vizgard",
+          ],
+        },
+        LV: {
+          brand: [
+            "AgEagle",
+            " Parrot",
+            " Peli",
+            " Quantum Systems",
+            " Reveal",
+            " Teledyne",
+            " Vizgard",
+          ],
+        },
+        LT: {
+          brand: [
+            "AgEagle",
+            " Parrot",
+            " Peli",
+            " Quantum Systems",
+            " Reveal",
+            " Teledyne",
+            " Vizgard",
+          ],
+        },
+        SE: { brand: "" },
+        FI: { brand: "" },
       },
     },
     colorMin: "#E2E2E2",
@@ -201,7 +196,7 @@ function initializeMap() {
 
       if (countryValues && countryValues.brand) {
         innerHTML +=
-          '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span>Brand: ' +
+          '<div style="margin-bottom: 8px"><span style="color: #6d0; display: inline-block; margin-right: 4px; width: 20px; text-align: center">✔</span><strong>Brands:</strong> ' +
           countryValues.brand +
           "</div>";
       }
@@ -234,14 +229,34 @@ window.addEventListener("resize", initializeMap);
 document.addEventListener("DOMContentLoaded", initializeMap);
 
 // Slide
-
 function openModal(event) {
-  const modal = event.target.closest(".slide").querySelector(".slide-modal");
-  modal.style.display = "block";  // Show modal
+  const slide = event.target.closest(".slide");
+  const modal = slide.querySelector(".slide-modal");
+  modal.style.display = "flex";
 }
 
-function closeModal() {
-  document.querySelectorAll(".slide-modal").forEach((modal) => {
-    modal.style.display = "none";  // Hide all modals
-  });
+function closeModal(event) {
+  const modal = event.target.closest(".slide-modal");
+  modal.style.display = "none";
+}
+
+// Brands
+function closePopupOnOutsideClick(event) {
+  const popupContent = document.querySelector(".popup-content");
+  if (!popupContent.contains(event.target)) {
+    closePopup();
+  }
+}
+
+function openPopup(title, description, link) {
+  document.getElementById("popup-title").textContent = title;
+  document.getElementById("popup-description").textContent = description;
+  document.getElementById("popup-link").href = link;
+  document.getElementById("popup").style.display = "flex";
+  fullpage_api.setAllowScrolling(false);
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+  fullpage_api.setAllowScrolling(true);
 }

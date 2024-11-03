@@ -15,7 +15,7 @@
   .manufacturer-description {
     flex: 1;
     padding-right: 20px;
-    max-width: 40%;
+    max-width: 50%;
     box-sizing: border-box;
 
     @media screen and (max-width: 985px) {
@@ -24,13 +24,11 @@
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      max-width: 60%;
       flex: none;
     }
 
     @media screen and (max-width: 690px) {
       padding: 10px;
-      max-width: 50%;
     }
 
     @media screen and (max-width: 555px) {
@@ -41,28 +39,6 @@
 
     @media screen and (max-width: 440px) {
       padding: 0px;
-    }
-
-    h3 {
-      text-align: left;
-      line-height: 2rem;
-
-      @media screen and (max-width: 985px) {
-        line-height: 1.5rem;
-      }
-
-      @media screen and (max-width: 790px) {
-        font-size: 1.1rem;
-      }
-
-      @media screen and (max-width: 555px) {
-        text-align: center;
-        font-size: 1rem;
-      }
-
-      @media screen and (max-width: 440px) {
-        font-size: 0.95rem;
-      }
     }
 
     p {
@@ -88,48 +64,80 @@
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    max-width: 60%;
+    max-width: 50%;
     box-sizing: border-box;
-
-    @media screen and (max-width: 768px) {
-      max-width: 40%;
-    }
-
-    @media screen and (max-width: 690px) {
-      max-width: 50%;
-    }
 
     @media screen and (max-width: 555px) {
       max-width: 100%;
       flex: none;
+      justify-content: center;
     }
 
     .logo-item {
       padding: 10px;
-    //   flex: 1 1 25%;
       text-align: center;
 
-    //   @media screen and (max-width: 440px) {
-    //     flex: 1 1 0%;
-    //   }
-    
-
       .company-logo {
-        max-width: 170px;
-        max-height: 90px;
+        max-width: 140px;
+        max-height: 80px;
         object-fit: contain;
         display: block;
         margin: 0 auto;
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1467px) {
           max-width: 130px;
-          max-height: 80px;
+          max-height: 70px;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1378px) {
+          max-width: 122px;
+          max-height: 70px;
+        }
+
+        @media screen and (max-width: 1307px) {
+          max-width: 115px;
+          max-height: 70px;
+        }
+
+        @media screen and (max-width: 1245px) {
+          max-width: 110px;
+          max-height: 70px;
+        }
+
+        @media screen and (max-width: 1229px) {
           max-width: 100px;
+          max-height: 70px;
+        }
+
+        @media screen and (max-width: 1155px) {
+          max-width: 100px;
+          max-height: 70px;
+        }
+
+        @media screen and (max-width: 1112px) {
+          max-width: 130px;
+          max-height: 70px;
+        }
+
+        @media screen and (max-width: 1045px) {
+          max-width: 120px;
+          max-height: 70px;
+        }
+
+        @media screen and (max-width: 956px) {
+          max-width: 100px;
+          max-height: 60px;
+        }
+
+        @media screen and (max-width: 823px) {
+          max-width: 90px;
+          max-height: 50px;
+        }
+
+        @media screen and (max-width: 756px) {
+          max-width: 80px;
           max-height: 50px;
         }
 
@@ -143,82 +151,111 @@
           max-height: 45px;
         }
       }
-
-      .popup {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 50%;
-        padding: 15px;
-        background-color: black;
-        color: white;
-        border-radius: 8px;
-        z-index: 10;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        
-        @media screen and (max-width: 985px) {
-          width: 80%;
-        }
-
-        @media screen and (max-width: 555px) {
-          width: 90%;
-        }
-
-        .close-btn {
-          position: absolute;
-          top: 5px;
-          right: 5px;
-          cursor: pointer;
-          color: $white !important;
-          border-bottom: none;
-        }
-
-        p {
-          color: $white !important;
-          padding: 25px;
-          font-size: 1rem;
-
-          @media screen and (max-width: 1266px) {
-            font-size: 1rem;
-          }
-
-          @media screen and (max-width: 985px) {
-            padding: 15px;
-          }
-
-          @media screen and (max-width: 555px) {
-            padding: 10px 5px;
-            font-size: 0.9rem;
-          }
-        }
-
-        h3 {
-          padding: 0;
-          padding-top: 10px;
-          font-size: 1.2rem;
-        }
-
-        a {
-          font-family: $font_2;
-
-          button {
-            background-color: transparent;
-            color: $white;
-            font-style: italic;
-            letter-spacing: 1px;
-
-            i {
-              font-size: 12px;
-            }
-          }
-        }
-      }
     }
   }
 }
 
 .logo-item:hover .company-logo {
   transform: scale(1.1);
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+
+  .popup-content {
+    background: $accentcolor;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #popup-title {
+      font-family: $font_2;
+      padding: 20px;
+      font-size: 1.5rem;
+
+      @media screen and (max-width: 1266px) {
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-width: 985px) {
+        font-size: 1.3rem;
+        padding: 15px;
+      }
+
+      @media screen and (max-width: 555px) {
+        font-size: 1.1rem;
+        padding: 10px;
+      }
+    }
+
+    #popup-description {
+      font-family: $font_2;
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 1px;
+
+      @media screen and (max-width: 1266px) {
+        font-size: 1.25rem;
+      }
+
+      @media screen and (max-width: 985px) {
+        padding: 15px;
+        font-size: 1.15rem;
+      }
+
+      @media screen and (max-width: 555px) {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+      }
+    }
+
+    #popup-link {
+      button {
+        background-color: transparent;
+        color: $white;
+        padding: 20px;
+        font-family: $font_2;
+        font-size: 1.4rem;
+
+        @media screen and (max-width: 1266px) {
+          font-size: 1.3rem;
+        }
+  
+        @media screen and (max-width: 985px) {
+          font-size: 1.2rem;
+          padding: 15px;
+        }
+  
+        @media screen and (max-width: 555px) {
+          font-size: 1.05rem;
+          padding: 10px;
+        }
+
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }

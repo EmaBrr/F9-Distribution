@@ -10,6 +10,7 @@
     p {
       height: 100%;
       color: $white;
+      line-height: 1.5;
       @media screen and (max-width: 768px) {
         padding: 0px 5px;
       }
@@ -89,16 +90,18 @@
         }
 
         p {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: box; 
-          -webkit-line-clamp: 3; 
-          line-clamp: 3; 
-          -webkit-box-orient: vertical;
-          max-height: 4.5em;
+          // overflow: hidden;
+          // text-overflow: ellipsis;
+          // display: box; 
+          // -webkit-line-clamp: 3; 
+          // line-clamp: 3; 
+          // -webkit-box-orient: vertical;
+          // max-height: 4.5em;
           flex: 1;
           text-align: left;
           font-size: 1.3rem;
+
+          
 
           @media screen and (max-width: 985px) {
             font-size: 1.15rem;
