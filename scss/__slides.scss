@@ -17,25 +17,25 @@
     }
 
     .slide {
-      min-height: 300px;
+      // min-height: 300px;
       justify-content: space-between;
       padding: 0px 0px 20px 0px;
 
-      @media screen and (max-width: 1280px) {
-        min-height: 350px;
-      }
+      // @media screen and (max-width: 1280px) {
+      //   min-height: 350px;
+      // }
 
-      @media screen and (max-width: 900px) {
-        min-height: 450px;
-      }
+      // @media screen and (max-width: 900px) {
+      //   min-height: 450px;
+      // }
 
-      @media screen and (max-width: 800px) {
-        min-height: 450px;
-      }
+      // @media screen and (max-width: 800px) {
+      //   min-height: 450px;
+      // }
 
-      @media screen and (max-width: 500px) {
-        min-height: 450px;
-      }
+      // @media screen and (max-width: 500px) {
+      //   min-height: 450px;
+      // }
 
       h3 {
         font-family: $font_1;
@@ -85,27 +85,26 @@
           @media (max-width: 768px) {
             width: auto;
             height: auto;
-            max-height: 20vh;
+            max-height: 30vh;
+            max-width: 50%;
           }
         }
 
         p {
-          // overflow: hidden;
-          // text-overflow: ellipsis;
-          // display: box; 
-          // -webkit-line-clamp: 3; 
-          // line-clamp: 3; 
-          // -webkit-box-orient: vertical;
-          // max-height: 4.5em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 6; 
+          line-clamp: 6; 
+          -webkit-box-orient: vertical;
           flex: 1;
           text-align: left;
           font-size: 1.3rem;
-
+          display: -webkit-box;
           
 
           @media screen and (max-width: 985px) {
             font-size: 1.15rem;
-            padding: 10px;
+            margin: 5px;
           }
 
           @media screen and (max-width: 768px) {

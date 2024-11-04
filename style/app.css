@@ -1501,29 +1501,8 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 .slides .item-container .slide {
-  min-height: 300px;
   justify-content: space-between;
   padding: 0px 0px 20px 0px;
-}
-@media screen and (max-width: 1280px) {
-  .slides .item-container .slide {
-    min-height: 350px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .slides .item-container .slide {
-    min-height: 450px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .slides .item-container .slide {
-    min-height: 450px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .slides .item-container .slide {
-    min-height: 450px;
-  }
 }
 .slides .item-container .slide h3 {
   font-family: "Poppins", Sans-serif;
@@ -1576,18 +1555,25 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   .slides .item-container .slide .slide-content .slide-img {
     width: auto;
     height: auto;
-    max-height: 20vh;
+    max-height: 30vh;
+    max-width: 50%;
   }
 }
 .slides .item-container .slide .slide-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
   flex: 1;
   text-align: left;
   font-size: 1.3rem;
+  display: -webkit-box;
 }
 @media screen and (max-width: 985px) {
   .slides .item-container .slide .slide-content p {
     font-size: 1.15rem;
-    padding: 10px;
+    margin: 5px;
   }
 }
 @media screen and (max-width: 768px) {
