@@ -1556,7 +1556,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     width: auto;
     height: auto;
     max-height: 30vh;
-    max-width: 50%;
+    max-width: 80%;
   }
 }
 .slides .item-container .slide .slide-content p {
