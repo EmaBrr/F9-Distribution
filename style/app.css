@@ -1168,7 +1168,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.55);
   border-radius: 8px;
   z-index: 0;
 }
@@ -1331,142 +1331,142 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .values-section .value-1 {
   background-position: 0% 0;
-  background-image: url("../img/values1.jpg");
+  background-image: url("../img/values_1.jpg");
 }
 @media (max-width: 985px) {
   .values-section .value-1 {
     background-position: 0% 15%;
-    background-image: url("../img/values4.jpg");
+    background-image: url("../img/values_2.jpg");
   }
 }
 @media screen and (max-width: 790px) {
   .values-section .value-1 {
     background-position: 0% 0%;
-    background-image: url("../img/values5.jpg");
+    background-image: url("../img/values_3.jpg");
   }
 }
 @media screen and (max-width: 530px) {
   .values-section .value-1 {
     background-position: 0% 0%;
-    background-image: url("../img/values7.jpg");
+    background-image: url("../img/values_4.jpg");
   }
 }
 @media screen and (max-width: 450px) {
   .values-section .value-1 {
     background-position: 0% 0%;
-    background-image: url("../img/values6.jpg");
+    background-image: url("../img/values_5.jpg");
   }
 }
 .values-section .value-2 {
   background-position: 22% 0;
-  background-image: url("../img/values1.jpg");
+  background-image: url("../img/values_1.jpg");
 }
 @media (max-width: 985px) {
   .values-section .value-2 {
     background-position: 50% 15%;
-    background-image: url("../img/values4.jpg");
+    background-image: url("../img/values_2.jpg");
   }
 }
 @media screen and (max-width: 790px) {
   .values-section .value-2 {
     background-position: 100% 0%;
-    background-image: url("../img/values5.jpg");
+    background-image: url("../img/values_3.jpg");
   }
 }
 @media screen and (max-width: 530px) {
   .values-section .value-2 {
     background-position: 0% 25%;
-    background-image: url("../img/values7.jpg");
+    background-image: url("../img/values_4.jpg");
   }
 }
 @media screen and (max-width: 450px) {
   .values-section .value-2 {
     background-position: 0% 25%;
-    background-image: url("../img/values6.jpg");
+    background-image: url("../img/values_5.jpg");
   }
 }
 .values-section .value-3 {
   background-position: 48% 0;
-  background-image: url("../img/values1.jpg");
+  background-image: url("../img/values_1.jpg");
 }
 @media (max-width: 985px) {
   .values-section .value-3 {
     background-position: 100% 15%;
-    background-image: url("../img/values4.jpg");
+    background-image: url("../img/values_2.jpg");
   }
 }
 @media screen and (max-width: 790px) {
   .values-section .value-3 {
     background-position: 0% 35%;
-    background-image: url("../img/values5.jpg");
+    background-image: url("../img/values_3.jpg");
   }
 }
 @media screen and (max-width: 530px) {
   .values-section .value-3 {
     background-position: 0% 51%;
-    background-image: url("../img/values7.jpg");
+    background-image: url("../img/values_4.jpg");
   }
 }
 @media screen and (max-width: 450px) {
   .values-section .value-3 {
     background-position: 0% 51%;
-    background-image: url("../img/values6.jpg");
+    background-image: url("../img/values_5.jpg");
   }
 }
 .values-section .value-4 {
   background-position: 73% 0;
-  background-image: url("../img/values1.jpg");
+  background-image: url("../img/values_1.jpg");
 }
 @media (max-width: 985px) {
   .values-section .value-4 {
     background-position: 8% 100%;
-    background-image: url("../img/values4.jpg");
+    background-image: url("../img/values_2.jpg");
   }
 }
 @media screen and (max-width: 790px) {
   .values-section .value-4 {
     background-position: 100% 35%;
-    background-image: url("../img/values5.jpg");
+    background-image: url("../img/values_3.jpg");
   }
 }
 @media screen and (max-width: 530px) {
   .values-section .value-4 {
     background-position: 0% 76%;
-    background-image: url("../img/values7.jpg");
+    background-image: url("../img/values_4.jpg");
   }
 }
 @media screen and (max-width: 450px) {
   .values-section .value-4 {
     background-position: 0% 76%;
-    background-image: url("../img/values6.jpg");
+    background-image: url("../img/values_5.jpg");
   }
 }
 .values-section .value-5 {
   background-position: 99% 0;
-  background-image: url("../img/values1.jpg");
+  background-image: url("../img/values_1.jpg");
 }
 @media (max-width: 985px) {
   .values-section .value-5 {
     background-position: 95% 100%;
-    background-image: url("../img/values4.jpg");
+    background-image: url("../img/values_2.jpg");
   }
 }
 @media screen and (max-width: 790px) {
   .values-section .value-5 {
     background-position: 0% 75%;
-    background-image: url("../img/values5.jpg");
+    background-image: url("../img/values_3.jpg");
   }
 }
 @media screen and (max-width: 530px) {
   .values-section .value-5 {
     background-position: 0% 99%;
-    background-image: url("../img/values7.jpg");
+    background-image: url("../img/values_4.jpg");
   }
 }
 @media screen and (max-width: 450px) {
   .values-section .value-5 {
     background-position: 0% 99%;
-    background-image: url("../img/values6.jpg");
+    background-image: url("../img/values_5.jpg");
   }
 }
 
