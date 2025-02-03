@@ -758,7 +758,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 .fp-overflow .welcome .welcome-container .headline {
-  background-image: url("../img/Parrot-army-drone.jpeg");
+  background-image: url("../img/anafi-usa-trusted-and-proven-desktop.jpg");
   position: relative;
   background-position: center center;
   background-size: 150%;
@@ -1262,36 +1262,36 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 .values-section .value-item .value-overlay .value-description p {
   color: #f8f7f6;
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 @media (max-width: 1400px) {
-  .values-section .value-item .value-overlay .value-description p {
-    font-size: 1.05rem;
-  }
-}
-@media (max-width: 1100px) {
   .values-section .value-item .value-overlay .value-description p {
     font-size: 0.95rem;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .values-section .value-item .value-overlay .value-description p {
     font-size: 0.9rem;
   }
 }
-@media (max-width: 985px) {
+@media (max-width: 1050px) {
   .values-section .value-item .value-overlay .value-description p {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 985px) {
+  .values-section .value-item .value-overlay .value-description p {
+    font-size: 0.7rem;
+  }
+}
 @media (max-width: 530px) {
   .values-section .value-item .value-overlay .value-description p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 440px) {
   .values-section .value-item .value-overlay .value-description p {
-    font-size: 0.7rem;
+    font-size: 0.63rem;
   }
 }
 .values-section .value-item .value-title {
